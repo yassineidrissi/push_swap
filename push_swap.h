@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 21:28:35 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/13 03:56:43 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/14 18:44:41 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <limits.h>
 # include <ctype.h>
 # include "libft/libft.h"
+# include "ft_printf/ft_printf.h"
 
 # define PB 1
 # define RA 2
@@ -29,6 +30,13 @@
 # define RRB 6
 # define SB 7
 # define SA 8
+
+typedef struct node
+{
+    int data;
+    struct node *previous;
+    struct node *link;
+} t_node;
 
 typedef struct	s_stk
 {
@@ -51,13 +59,18 @@ typedef struct	s_var
 	t_stk			*pr;
 }	t_var;
 
-/*Operations*/
+//**************operation ****************//
+void sa(struct node **a);
+void *ra(struct node **a);
+void    pb(struct node **stack_from,struct node **stack_to);
+
+          ///*Operations*//
 void				rr_stk(t_stk **, t_stk *);
 void				p_stk(t_stk **, t_stk **, t_stk *);
 void				r_stk(t_stk **);
 void				s_stk(t_stk **);
 
-/*PS parser */
+		//*PS parser *//
 int					check_sort(t_stk **, int);
 void				check_dup(char **);
 int					check_numbers(char **);
@@ -68,14 +81,14 @@ void				sort_bigger(t_stk **, t_stk **, int, t_var *);
 void				normalize_a(t_stk **, t_stk **, t_var *, int);
 void				normalize_b(t_stk **, t_stk **, t_var *, int);
 
-/* PS utils */
+         //* PS utils */
 void				ft_exit_ps(char *, int);
 t_var				*ft_init_var(t_var *);
 t_stk				*fill_list(t_var *, char **, t_stk *);
 t_stk				*ft_lst_dup(t_stk *);
 t_stk				*ft_lstsort(t_stk *);
 
-/*List Auxiliary functions*/
+       //*List Auxiliary functions*//
 int					list_size(t_stk *);
 void				add_back(t_stk **, t_stk *);
 void				add_back_r(t_stk **);
