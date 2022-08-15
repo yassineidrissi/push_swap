@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 19:19:41 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/14 20:29:10 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/15 22:47:37 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ void pa(struct node **a, struct node **b)
 	t_node *tmp = *b;
 	*b = (*b)->link;
 	tmp->link = *a;
-	a = &tmp;
+	*a = tmp;
+	ft_lstdelone(tmp, del);
 	ft_printf("pa\n");
 }
 
@@ -59,7 +60,8 @@ void pb(struct node **a, struct node **b)
 	t_node *tmp = *b;
 	*a = (*b)->link;
 	tmp->link = *b;
-	b = &tmp;
+	*b = tmp;
+	ft_lstdelone(tmp, del);
 	ft_printf("pb\n");
 }
 
