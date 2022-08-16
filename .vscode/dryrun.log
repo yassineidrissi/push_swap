@@ -1,4 +1,4 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/yassine/Desktop/42_project/push_swap'
 /Applications/Xcode.app/Contents/Developer/usr/bin/make -C libft/
 make[1]: Entering directory `/Users/yassine/Desktop/42_project/push_swap/libft'
@@ -42,19 +42,5 @@ make[1]: Leaving directory `/Users/yassine/Desktop/42_project/push_swap/libft'
 /bin/mv libft/libft.a .
 make: Leaving directory `/Users/yassine/Desktop/42_project/push_swap'
  
-make: *** No rule to make target `obj/main.o', needed by `push_swap'.
-make: *** No rule to make target `obj/list.o', needed by `push_swap'.
-make: *** No rule to make target `obj/list_sort.o', needed by `push_swap'.
-make: *** No rule to make target `obj/list_u1.o', needed by `push_swap'.
-make: *** No rule to make target `obj/list_u2.o', needed by `push_swap'.
-make: *** No rule to make target `obj/check.o', needed by `push_swap'.
-make: *** No rule to make target `obj/init.o', needed by `push_swap'.
-make: *** No rule to make target `obj/case.o', needed by `push_swap'.
-make: *** No rule to make target `obj/algo_short.o', needed by `push_swap'.
-make: *** No rule to make target `obj/algo_bigger.o', needed by `push_swap'.
-make: *** No rule to make target `obj/norm.o', needed by `push_swap'.
-make: *** No rule to make target `obj/get.o', needed by `push_swap'.
-make: *** No rule to make target `obj/op_p.o', needed by `push_swap'.
-make: *** No rule to make target `obj/op_r.o', needed by `push_swap'.
-make: *** No rule to make target `obj/op_s.o', needed by `push_swap'.
+make: *** No rule to make target `obj/push_swap.o', needed by `push_swap'.
 

@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 21:28:35 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/16 13:03:41 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/16 17:05:00 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void    pa(struct node **stack_from,struct node **stack_to);
 void    pb(struct node **stack_from,struct node **stack_to);
 void 	ft_lstrangedown(t_node **a);
 void 	rra(t_node **a);
-void 	rrb(t_node **a);
+void 	rrb(t_node **b);
 void 	rrr(t_node **a, t_node **b);
 
           ///*Operations*//

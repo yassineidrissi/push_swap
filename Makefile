@@ -6,7 +6,7 @@
 #    By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/12 22:48:21 by yaidriss          #+#    #+#              #
-#    Updated: 2022/08/12 22:48:23 by yaidriss         ###   ########.fr        #
+#    Updated: 2022/08/16 19:35:48 by yaidriss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,21 +32,11 @@ INCLUDE		=	-I include/					\
 
 RM			=	/bin/rm -f
 
-PS_FILES	=	main.c			\
-				list.c			\
-				list_sort.c		\
-				list_u1.c		\
-				list_u2.c		\
-				check.c			\
-				init.c			\
-				case.c			\
-				algo_short.c	\
-				algo_bigger.c	\
-				norm.c			\
-				get.c			\
-				op_p.c			\
-				op_r.c			\
-				op_s.c
+PS_FILES	=	push_swap.c			\
+				# push_swap_main.c	\
+				# push_swap_utils.c	\
+				# push_swap_sort.c	\
+				# push_swap_checker.c
 
 # C_FILES		=	c_srcs/c_main.c	
 

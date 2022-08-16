@@ -2,6 +2,18 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "(lldb) Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "enter program name, for example ${workspaceFolder}/a.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb"
+    },
+    {
       "name": "(lldb) Attach",
       "type": "cppdbg",
       "request": "attach",
@@ -16,7 +28,7 @@
       "stopAtEntry": true,
       "externalConsole": false,
       "cwd": "/Users/yassine/Desktop/42_project/push_swap",
-      "program": "/Users/yassine/Desktop/42_project/push_swap/build/Debug/outDebug",
+      "program": "/Users/yassine/Desktop/42_project/push_swap/a.out",
       "MIMode": "gdb"
     }
   ]
