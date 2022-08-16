@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "(lldb) Attach",
+      "type": "cppdbg",
+      "request": "attach",
+      "program": "${workspaceFolder}/a.out",
+      "MIMode": "lldb"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
@@ -9,7 +16,7 @@
       "stopAtEntry": true,
       "externalConsole": false,
       "cwd": "/Users/yassine/Desktop/42_project/push_swap",
-      "program": "/Users/yassine/Desktop/42_project/push_swap/build/Debug/outDebug",
+      "program": "/Users/yassine/Desktop/42_project/push_swap/a.out",
       "MIMode": "gdb"
     }
   ]

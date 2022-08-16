@@ -6,42 +6,52 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 19:19:41 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/15 22:47:37 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/16 02:54:09 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void sa(struct node **a)
+void swap(struct node **a)
 {
 	int tmp;
-	if(!a)
+	if(!a || !*a || !(*a)->link)
 		return ;
 	tmp = (*a)->data;
-	(*a)->data = (*a)->link->data;
-	(*a)->link->data = tmp;
-	ft_printf("sa\n");
+	(*a)->data = ((*a)->link)->data;
+	((*a)->link)->data = tmp;
+}
+
+void sa(struct node **a)
+{
+	swap(a);
+	printf("sa\n");
 }
 
 void sb(struct node **b)
 {
-	int tmp;
-	if(!b)
-		return ;
-	tmp = (*b)->data;
-	(*b)->data = (*b)->link->data;
-	(*b)->link->data = tmp;
-	ft_printf("sb\n");
+	swap(b);
+	printf("sb\n");
 }
 
 void ss(struct node **a, struct node **b)
 {
-	sa(a);
-	sb(b);
-	ft_printf("ss\n");
+	swap(a);
+	swap(b);
+	printf("ss\n");
 }
 
-void pa(struct node **a, struct node **b)
+void ft_printflst(t_node **a)
+{
+	while(*a)
+	{
+		printf("%d ", (*a)->data);
+		*a = (*a)->link;
+	}
+	printf("\n");
+}
+
+void ft_pushlst(t_node **a, t_node **b)
 {
 	if (!b || !(*b))
 		return ;
@@ -49,72 +59,95 @@ void pa(struct node **a, struct node **b)
 	*b = (*b)->link;
 	tmp->link = *a;
 	*a = tmp;
-	ft_lstdelone(tmp, del);
-	ft_printf("pa\n");
+	// ft_lstdelone(tmp, del);
+}
+
+void pa(struct node **a, struct node **b)
+{
+	ft_pushlst(a, b);
+	printf("pa\n");
 }
 
 void pb(struct node **a, struct node **b)
 {
-	if (!a || !(*a))
-		return ;
-	t_node *tmp = *b;
-	*a = (*b)->link;
-	tmp->link = *b;
-	*b = tmp;
-	ft_lstdelone(tmp, del);
-	ft_printf("pb\n");
+	ft_pushlst(b, a);
+	printf("pb\n");
 }
 
-void ra(t_list **a)
+// void pa(struct node **a, struct node **b)
+// {
+// 	if (!b || !(*b))
+// 		return ;
+// 	t_node *tmp = *b;
+// 	*b = (*b)->link;
+// 	tmp->link = *a;
+// 	*a = tmp;
+// 	ft_lstdelone(tmp, del);
+// 	printf("pa\n");
+// }
+
+// void pb(struct node **a, struct node **b)
+// {
+// 	if (!a || !(*a))
+// 		return ;
+// 	t_node *tmp = *b;
+// 	*a = (*b)->link;
+// 	tmp->link = *b;
+// 	*b = tmp;
+// 	ft_lstdelone(tmp, del);
+// 	printf("pb\n");
+// }
+
+void ra(t_node **a)
 {
 	if (!a || !(*a))
 		return ;
 	ft_lstadd_back(a, *a);
-	*a = (*a)->next;
-	ft_printf("ra\n");
+	*a = (*a)->link;
+	printf("ra\n");
 }
 
-void rb(t_list **b)
+void rb(t_node **b)
 {
 	if (!b || !(*b))
 		return ;
 	ft_lstadd_back(b, *b);
-	*b = (*b)->next;
-	ft_printf("rb\n");
+	*b = (*b)->link;
+	printf("rb\n");
 }
 
-void rr(t_list **a, t_list **b)
-{
-	ra(a);
-	rb(b);
-	ft_printf("rr\n");
-}
+// void rr(t_list **a, t_list **b)
+// {
+// 	ra(a);
+// 	rb(b);
+// 	printf("rr\n");
+// }
 
-void rra(t_list **a)
-{
-	if (!a || !(*a))
-		return ;
-	ft_lstadd_front(a, *a);
-	ft_lstlast(*a)->next = *a;
-	(*a)->next = ft_lstlast(*a);
-	*a = (*a)->next;
-	ft_printf("rra\n");
-}
+// void rra(t_list **a)
+// {
+// 	if (!a || !(*a))
+// 		return ;
+// 	ft_lstadd_front(a, *a);
+// 	ft_lstlast(*a)->next = *a;
+// 	(*a)->next = ft_lstlast(*a);
+// 	*a = (*a)->next;
+// 	printf("rra\n");
+// }
 
-void rrb(t_list **b)
-{
-	if (!b || !(*b))
-		return ;
-	ft_lstadd_front(b, *b);
-	ft_lstlast(*b)->next = *b;
-	(*b)->next = ft_lstlast(*b);
-	*b = (*b)->next;
-	ft_printf("rrb\n");
-}
+// void rrb(t_list **b)
+// {
+// 	if (!b || !(*b))
+// 		return ;
+// 	ft_lstadd_front(b, *b);
+// 	ft_lstlast(*b)->next = *b;
+// 	(*b)->next = ft_lstlast(*b);
+// 	*b = (*b)->next;
+// 	printf("rrb\n");
+// }
 
-void rrr(t_list **a, t_list **b)
-{
-	rra(a);
-	rrb(b);
-	ft_printf("rrr\n");
-}
+// void rrr(t_list **a, t_list **b)
+// {
+// 	rra(a);
+// 	rrb(b);
+// 	printf("rrr\n");
+// }

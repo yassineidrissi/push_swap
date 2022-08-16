@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 21:28:35 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/14 18:44:41 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/16 02:39:44 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 # include <limits.h>
 # include <ctype.h>
 # include "libft/libft.h"
-# include "ft_printf/ft_printf.h"
 
 # define PB 1
 # define RA 2
@@ -30,13 +29,6 @@
 # define RRB 6
 # define SB 7
 # define SA 8
-
-typedef struct node
-{
-    int data;
-    struct node *previous;
-    struct node *link;
-} t_node;
 
 typedef struct	s_stk
 {
@@ -60,8 +52,8 @@ typedef struct	s_var
 }	t_var;
 
 //**************operation ****************//
-void sa(struct node **a);
-void *ra(struct node **a);
+void 	sa(struct node **a);
+void 	ra(t_node **a);
 void    pb(struct node **stack_from,struct node **stack_to);
 
           ///*Operations*//
@@ -69,6 +61,10 @@ void				rr_stk(t_stk **, t_stk *);
 void				p_stk(t_stk **, t_stk **, t_stk *);
 void				r_stk(t_stk **);
 void				s_stk(t_stk **);
+void				ft_printflst(t_node **a);
+void				ft_swaplst(t_node **a, t_node **b);
+void				pa(struct node **a, struct node **b);
+void				pb(struct node **a, struct node **b);
 
 		//*PS parser *//
 int					check_sort(t_stk **, int);

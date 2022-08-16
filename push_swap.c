@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 21:10:22 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/13 04:05:47 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/16 02:52:00 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,30 +40,56 @@
 // 	t_stk			*pr;
 // }	t_var;
 
-int main(int argc, char **argv) {
-    char **str;
-    str = malloc(sizeof(char*)*3);
-    str[0] = "yassine";
-    str[1] = "idrissi";
-    str[2] = NULL;
-    struct s_stk adm;
-    struct s_var yas;
-    adm.num = 0;
-    adm.prv = NULL;
-    yas.line = str[0];
-    yas.split = str;
-    yas.color = 19;
-    yas.nx = &adm;
-    yas.pr = NULL;
-    printf("the value of line is %d",adm.num);
-    adm.nxt = malloc(sizeof(struct s_stk));
-    adm.nxt->num = 1;
-    adm.nxt->prv = &adm;
-    yas.nx = malloc(sizeof(struct s_var));
-    //yas.nx->pr = yas;
-    printf("\nthe value now is %d",adm.nxt->num);
-    adm.nxt->nxt = malloc(sizeof(struct s_stk));
-    adm.nxt->nxt->num = 2;
-    adm.nxt->nxt->prv = &(adm.nxt->num);
-    printf("\nthe value now is %d",adm.nxt->nxt->num);
+// int main(int argc, char **argv) {
+//     char **str;
+//     str = malloc(sizeof(char*)*3);
+//     str[0] = "yassine";
+//     str[1] = "idrissi";
+//     str[2] = NULL;
+//     struct s_stk adm;
+//     struct s_var yas;
+//     adm.num = 0;
+//     adm.prv = NULL;
+//     yas.line = str[0];
+//     yas.split = str;
+//     yas.color = 19;
+//     yas.nx = &adm;
+//     yas.pr = NULL;
+//     printf("the value of line is %d",adm.num);
+//     adm.nxt = malloc(sizeof(struct s_stk));
+//     adm.nxt->num = 1;
+//     adm.nxt->prv = &adm;
+//     yas.nx = malloc(sizeof(struct s_var));
+//     //yas.nx->pr = yas;
+//     printf("\nthe value now is %d",adm.nxt->num);
+//     adm.nxt->nxt = malloc(sizeof(struct s_stk));
+//     adm.nxt->nxt->num = 2;
+//     adm.nxt->nxt->prv = &(adm.nxt->num);
+//     printf("\nthe value now is %d",adm.nxt->nxt->num);
+// }
+
+
+int main()
+{
+    // p// struct yas
+    struct node *yas;
+    struct node *ya;
+    yas = malloc(sizeof(struct node));
+    ya = malloc(sizeof(struct node));
+    yas->link = malloc(sizeof(struct node));
+    ya->link = malloc(sizeof(struct node));
+    yas->data = 1;
+    yas->link->data = 2;
+    yas->link->link = NULL;
+    ya->data = 3;
+    ya->link->data = 4;
+    ya->link->link = NULL;
+
+    ft_printflst(&ya);
+    printf("the value of yas is %d\n",yas->data);
+    ft_printflst(&yas);
+    pa(&yas,&ya);
+    ft_printflst(&ya);
+    printf("yas\n");
+    ft_printflst(&yas);
 }
