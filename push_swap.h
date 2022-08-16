@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 21:28:35 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/16 02:39:44 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/16 13:03:41 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,20 @@ typedef struct	s_var
 
 //**************operation ****************//
 void 	sa(struct node **a);
+void 	sb(struct node **a);
+void 	ft_pushlst(t_node **a, t_node **b);
 void 	ra(t_node **a);
+void 	rb(t_node **a);
+void 	rr(t_node **a, t_node **b);
+void 	ft_lstrangeup(t_node **a);
 void    pb(struct node **stack_from,struct node **stack_to);
+void 	swap(struct node **a);
+void    pa(struct node **stack_from,struct node **stack_to);
+void    pb(struct node **stack_from,struct node **stack_to);
+void 	ft_lstrangedown(t_node **a);
+void 	rra(t_node **a);
+void 	rrb(t_node **a);
+void 	rrr(t_node **a, t_node **b);
 
           ///*Operations*//
 void				rr_stk(t_stk **, t_stk *);

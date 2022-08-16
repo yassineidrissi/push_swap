@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 19:19:41 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/16 12:09:25 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/16 13:02:38 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,41 +100,52 @@ void pb(struct node **a, struct node **b)
 // 	printf("pb\n");
 // }
 
-void ra(t_node **a)
+
+void ft_lstrangeup(t_node **a)
 {
 	if (!a || !(*a))
 		return ;
 	ft_lstadd_back(a, *a);
 	*a = (*a)->link;
+}
+void ra(t_node **a)
+{
+	ft_lstrangeup(a);
 	printf("ra\n");
 }
 
 void rb(t_node **b)
 {
-	if (!b || !(*b))
-		return ;
-	ft_lstadd_back(b, *b);
-	*b = (*b)->link;
+	ft_lstrangeup(b);
 	printf("rb\n");
 }
 
-// void rr(t_list **a, t_list **b)
-// {
-// 	ra(a);
-// 	rb(b);
-// 	printf("rr\n");
-// }
+void rr(t_node **a, t_node **b)
+{
+	ft_lstrangeup(a);
+	ft_lstrangeup(b);
+	printf("rr\n");
+}
 
-// void rra(t_list **a)
-// {
-// 	if (!a || !(*a))
-// 		return ;
-// 	ft_lstadd_front(a, *a);
-// 	ft_lstlast(*a)->next = *a;
-// 	(*a)->next = ft_lstlast(*a);
-// 	*a = (*a)->next;
-// 	printf("rra\n");
-// }
+void ft_lstrangedown(t_node **a)
+{
+	if (!a || !(*a))
+		return ;
+	ft_lstadd_front(a, ft_lstlast(*a));
+	ft_lstlast(*a)->link = NULL;
+}
+
+void rra(t_node **a)
+{
+	ft_lstrangedown(a);
+	printf("rra\n");
+}
+
+void rrb(t_node	**b)
+{
+	ft_lstrangedown(b);
+	printf("rrb\n");
+}
 
 // void rrb(t_list **b)
 // {
