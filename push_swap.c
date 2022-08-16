@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 21:10:22 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/16 02:52:00 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/16 12:14:45 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,11 +85,15 @@ int main()
     ya->link->data = 4;
     ya->link->link = NULL;
 
-    ft_printflst(&ya);
-    printf("the value of yas is %d\n",yas->data);
-    ft_printflst(&yas);
-    pa(&yas,&ya);
-    ft_printflst(&ya);
+    // ft_printflst(&ya);
+    printf("the value of yas is %d\n",ya->data);
+    // ft_printflst(&yas);
+    printf("the value of yas is %d\n",ya->link->data);
+    pb(&yas,&ya);
+    printf("the value of yas is %d\n",ya->data);
+    printf("the value of yas is %d\n",ya->link->data);
+    printf("the value of yas is %d\n",ya->link->link->data);
+    // ft_printflst(&ya);
     printf("yas\n");
-    ft_printflst(&yas);
+    // ft_printflst(&yas);
 }

@@ -6,25 +6,25 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `obj/main.o', needed by `push_swap'.  Stop.
 
-# Make data base, printed on Sun Aug 14 17:40:25 2022
+
+# Make data base, printed on Tue Aug 16 12:02:40 2022
 
 # Variables
 
-# environment
-VSCODE_GIT_ASKPASS_MAIN = /Users/yassine/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
 @F = $(notdir $@)
+ 
 # makefile
 CURDIR := /Users/yassine/Desktop/42_project/push_swap
 # makefile
@@ -39,22 +39,18 @@ _ = /usr/bin/make
 MAKEFILE_LIST :=  Makefile
 # makefile (from `Makefile', line 18)
 LIB_DIR = libft/
-# environment
-VSCODE_INJECTION = 1
 # makefile (from `Makefile', line 22)
 OBJ_DIR = obj/
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_CWD = /Users/yassine/Desktop/42_project/push_swap
+VSCODE_CWD = /
 # environment
-PATH = /Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Library/Apple/usr/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Users/yassine/Developer/flutter/bin:/Users/yassine/Developer/flutter/bin
+PATH = /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 # makefile (from `Makefile', line 13)
 PS_NAME = push_swap
 # environment
-LSCOLORS = Gxfxcxdxbxegedabagacad
-# environment
-ZDOTDIR = /var/folders/tc/cw3c91pd38jds6sv5tk88v5h0000gn/T/vscode-zsh
+LaunchInstanceID = 38824935-CE14-47F3-8B17-BDA856017498
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # makefile (from `Makefile', line 19)
@@ -64,7 +60,7 @@ LIB = libft.a
 # makefile (from `Makefile', line 21)
 DIR = srcs/
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.piy8ZNAW0x/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.id5iIbHkSi/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -78,8 +74,6 @@ HOME = /Users/yassine
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CLI = 1
-# environment
 VSCODE_CODE_CACHE_PATH = /Users/yassine/Library/Application Support/Code/CachedData/6d9b74a70ca9c7733b29f0456fd8195364076dda
 # environment
 LOGNAME = yassine
@@ -88,23 +82,17 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # makefile (from `Makefile', line 55)
 PS_OBJ = $(PS_SRCS:$(DIR)%.c=$(OBJ_DIR)%.o)
 # environment
-ZSH = /Users/yassine/.oh-my-zsh
-# environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
-MAKELEVEL := 0
-# environment
 XPC_FLAGS = 0x0
-# environment
-COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 5
+SHLVL = 1
 # makefile (from `Makefile', line 16)
 CC = clang
 # default
@@ -115,16 +103,10 @@ USER = yassine
 .DEFAULT_GOAL := all
 # makefile (from `Makefile', line 30)
 INCLUDE = -I include/ -I $(LIB_DIR)
-# environment
-LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
-# environment
-VSCODE_GIT_ASKPASS_EXTRA_ARGS = --ms-enable-electron-run-as-node
-# environment
-TERM_PROGRAM = vscode
 # default
 .VARIABLES := 
 # environment
@@ -134,8 +116,6 @@ TMPDIR = /var/folders/tc/cw3c91pd38jds6sv5tk88v5h0000gn/T/
 # environment
 VSCODE_IPC_HOOK = /Users/yassine/Library/Application Support/Code/1.70.1-main.sock
 # environment
-VSCODE_GIT_ASKPASS_NODE = /Users/yassine/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper
-# environment
 MallocNanoZone = 0
 # makefile
 MAKEFLAGS = Rrqp
@@ -144,9 +124,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-TERM_PROGRAM_VERSION = 1.70.1
-# environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.33635360.33635366.AA32F48B-8A00-46B4-B471-649659A8401D
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.33635360.33635366
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -161,8 +139,6 @@ FLAG = -c -Wall -Wextra -Werror
 __CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x2
 # environment
 COMMAND_MODE = unix2003
-# environment
-GIT_ASKPASS = /Users/yassine/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh
 # default
 MAKEFILES := 
 # automatic
@@ -172,9 +148,9 @@ PHANTOMJS_PLATFORM = darwin
 # environment
 PHANTOMJS_ARCH = x64
 # environment
-PAGER = less
-# environment
 LC_ALL = C
+# environment
+SECURITYSESSIONID = 186a3
 # automatic
 ^F = $(notdir $^)
 # default
@@ -184,15 +160,13 @@ SUFFIXES :=
 # makefile (from `Makefile', line 53)
 PS_SRCS = $(addprefix $(DIR), $(PS_FILES))
 # environment
-VSCODE_GIT_IPC_HANDLE = /var/folders/tc/cw3c91pd38jds6sv5tk88v5h0000gn/T/vscode-git-f5c1f0f36f.sock
+MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-TERM = xterm-256color
-# environment
-VSCODE_PID = 29622
+VSCODE_PID = 478
 # variable set hash-table stats:
-# Load=90/1024=9%, Rehash=0, Collisions=9/124=7%
+# Load=75/1024=7%, Rehash=0, Collisions=7/109=6%
 
 # Pattern-specific Variable Values
 
@@ -200,10 +174,10 @@ VSCODE_PID = 29622
 
 # Directories
 
-# . (device 16777225, inode 33702387): 10 files, no impossibilities.
-# srcs (device 16777225, inode 33729609): 3 files, 1 impossibilities.
+# . (device 16777228, inode 33702387): 17 files, no impossibilities.
+# srcs (device 16777228, inode 33729609): 3 files, 1 impossibilities.
 
-# 13 files, 1 impossibilities in 2 directories.
+# 20 files, 1 impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -301,9 +275,6 @@ obj/list_u1.o:
 
 # Not a target:
 obj/op_s.o:
- 
-make: *** No rule to make target `obj/main.o', needed by `push_swap'.  Stop.
-
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -373,6 +344,7 @@ push_swap: obj/main.o obj/list.o obj/list_sort.o obj/list_u1.o obj/list_u2.o obj
 #  File does not exist.
 #  File has not been updated.
 # variable set hash-table stats:
+ 
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 #  commands to execute (from `Makefile', line 70):
 	$(CC) -fsanitize=address -o $@ $^
@@ -410,6 +382,6 @@ obj/norm.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sun Aug 14 17:40:25 2022
+# Finished Make data base on Tue Aug 16 12:02:40 2022
 
  

@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 19:19:41 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/16 02:54:09 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/16 12:09:25 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,9 @@ void ft_pushlst(t_node **a, t_node **b)
 {
 	if (!b || !(*b))
 		return ;
-	t_node *tmp = *b;
+	t_node *tmp;
+	tmp = malloc(sizeof(t_node));
+	tmp = *b;
 	*b = (*b)->link;
 	tmp->link = *a;
 	*a = tmp;
