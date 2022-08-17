@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 19:19:41 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/16 21:09:55 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/16 22:25:42 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,25 +113,6 @@ void ft_lstrangeup(t_node **a)
 	ft_lstadd_back(a, tmp);
 }
 
-// void ra(t_node **a)
-// {
-//     if (*a == NULL)
-//         return ;
-//     int tmp = (*a)->data;
-//     struct node *ext = (struct node*)malloc(sizeof(struct node));
-//     ext->data = tmp;
-//     ext->link = NULL;
-//     // ext->previous =NULL;
-//     struct node *ptr = *a;
-//     (*a) = (*a)->link;
-//     //pop_first(a);
-//     while(ptr->link != NULL)
-//         ptr = ptr->link;
-//     ptr->link = ext;
-// 	free(ext);
-//     printf("ra\n");
-// }
-
 void ra(t_node **a)
 {
 	ft_lstrangeup(a);
@@ -169,6 +150,24 @@ void rr(t_node **a, t_node **b)
 // 	ptr->link = ext;
 // 	printf("ra\n");
 	
+// }
+// void ra(t_node **a)
+// {
+//     if (*a == NULL)
+//         return ;
+//     int tmp = (*a)->data;
+//     struct node *ext = (struct node*)malloc(sizeof(struct node));
+//     ext->data = tmp;
+//     ext->link = NULL;
+//     // ext->previous =NULL;
+//     struct node *ptr = *a;
+//     (*a) = (*a)->link;
+//     //pop_first(a);
+//     while(ptr->link != NULL)
+//         ptr = ptr->link;
+//     ptr->link = ext;
+// 	free(ext);
+//     printf("ra\n");
 // }
 
 void ft_lstrangedown(t_node **a)

@@ -6,74 +6,73 @@
 #    By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/12 22:48:21 by yaidriss          #+#    #+#              #
-#    Updated: 2022/08/16 19:35:48 by yaidriss         ###   ########.fr        #
+#    Updated: 2022/08/17 19:54:10 by yaidriss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-PS_NAME		=	push_swap
-# C_NAME		=	checker
+LIBFT_PATH		=	./libft
+LIBFT			=	$(LIBFT_PATH)/libft.a
 
-CC			=	clang
+SRCS			= 	push_swap.c \
+					# utils/arg_valid.c \
+					# utils/initStack.c \
+					# utils/link_list.c \
+					# utils/is_sorted.c \
+					# operations/operations_push.c \
+					# operations/operations_rev_rotate.c \
+					# operations/operations_rotate.c \
+					# operations/operations_swap.c \
+					# sort_simple.c utile_sort_simple.c \
+					# radix_sort.c
+					
+SRCS_B			= 	checker.c \
+					utils/arg_valid.c \
+					utils/initStack.c \
+					utils/link_list.c \
+					utils/is_sorted.c \
+					operations/operations_push.c \
+					operations/operations_rev_rotate.c \
+					operations/operations_rotate.c \
+					operations/operations_swap.c \
+					sort_simple.c utile_sort_simple.c \
+					radix_sort.c
+					
+OBJES 		= ${SRCS:.c=.o}
+OBJES_B 	= ${SRCS_B:.c=.o}
 
-LIB_DIR		=	libft/
-LIB			=	libft.a
+NAME 		= push_swap
+NAME_B		= checker
+CC 			= cc
+CFLAGS 		= -Wall -Wextra -Werror
+RM 			= rm -rf
 
-DIR			=	srcs/
-OBJ_DIR		=	obj/
-SUB_DIR		=	obj/ps_srcs obj/c_srcs
+%.o			:	%.c
+				$(CC) ${CFLAGS} -c $< -o $@
+	
 
-FLAG		=	-c			\
-				-Wall		\
-				-Wextra		\
-				-Werror
+all			:	$(NAME)
 
-INCLUDE		=	-I include/					\
-				-I $(LIB_DIR)
+$(NAME)		:	$(LIBFT) $(OBJES) push_swap.h
+				$(CC) $(OBJES) ${LIBFT} -o $(NAME)
+				
+$(NAME_B)	:   $(LIBFT) $(OBJES_B) push_swap.h
+				$(CC) $(OBJES_B) ${LIBFT} -o $(NAME_B)
 
-RM			=	/bin/rm -f
+$(LIBFT)	:
+				$(MAKE) -C $(LIBFT_PATH)
 
-PS_FILES	=	push_swap.c			\
-				# push_swap_main.c	\
-				# push_swap_utils.c	\
-				# push_swap_sort.c	\
-				# push_swap_checker.c
+bonus		: $(NAME_B)
 
-# C_FILES		=	c_srcs/c_main.c	
-
-PS_SRCS		=	$(addprefix $(DIR), $(PS_FILES))
-# C_SRCS		=	$(addprefix $(DIR), $(C_FILES))
-PS_OBJ		=	$(PS_SRCS:$(DIR)%.c=$(OBJ_DIR)%.o)
-# C_OBJ		=	$(C_SRCS:$(DIR)%.c=$(OBJ_DIR)%.o)
-
-all			:	$(PS_NAME)	
-# $(C_NAME) 
-
-obj/%.o		:	srcs/%.c
-				@mkdir -p $(OBJ_DIR) $(SUB_DIR)
-				$(CC) -g $(FLAG) $(INCLUDE) $< -o $@
-
-$(LIB)		:	
-				@$(MAKE) -C $(LIB_DIR)
-				/bin/mv $(LIB_DIR)$(LIB) .
-
-$(PS_NAME)	:	$(PS_OBJ) $(LIB)
-				$(CC) -fsanitize=address -o $@ $^
-
-# $(C_NAME)	:	$(C_OBJ) $(LIB)
-				# $(CC) -fsanitize=address -o $@ $^
-
-clean		:	
-				for dir in $(MODULES); do			\
-					@$(MAKE) clean -C $$dir;		\
-				done
-				@/bin/rm -rf $(OBJ_DIR)
+clean		:
+				$(MAKE) -C $(LIBFT_PATH) clean
+				$(RM) $(OBJES)
+				$(RM) $(OBJES_B)
 
 fclean		:	clean
-				@$(MAKE) fclean -C $(LIB_DIR)
-				@$(RM) $(LIB)
-				@$(RM) $(PS_NAME)
-				# @$(RM) $(C_NAME)
+				$(MAKE) -C $(LIBFT_PATH) fclean
+				$(RM) $(NAME)
+				$(RM) $(NAME_B)
 
-re			:	fclean all
+re			:	clean all
 
-.PHONY		:	all clean fclean re
+.PHONY		:	all clean fclean re ${LIBFT}

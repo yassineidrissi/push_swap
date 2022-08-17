@@ -27,10 +27,5 @@
     "**/.*/**",
     "**/.vscode",
     "**/.vscode/**"
-  ],
-  "files.associations": {
-    "push_swap.h": "c",
-    "push_swap1.h": "c",
-    "libft.h": "c"
-  }
+  ]
 }
