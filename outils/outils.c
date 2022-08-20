@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:37:03 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/20 20:04:18 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/20 22:53:00 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ void ft_free_lst(char **lst)
 		free(lst[i++]);
 	free(lst);
 }
+
 
 void ft_add_stacknode(struct node **stack_a, int ac, char **av)
 {

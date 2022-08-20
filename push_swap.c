@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 19:02:23 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/20 21:52:43 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/20 22:56:28 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ int main(int ac, char ** av)
     *stack_a = NULL;
     *stack_b = NULL;
     ft_add_stacknode(stack_a, ac, av);
+    printf("your corent stack is:\n");
     ft_printflst(stack_a);
+    
 }
 
