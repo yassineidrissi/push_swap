@@ -5,7 +5,7 @@ make: Entering directory `/Users/yassine/Desktop/42_project/push_swap'
 make[1]: Entering directory `/Users/yassine/Desktop/42_project/push_swap/libft'
 make[1]: `libft.a' is up to date.
 make[1]: Leaving directory `/Users/yassine/Desktop/42_project/push_swap/libft'
-cc -Wall -Wextra -Werror -c push_swap.c -o push_swap.o
-cc push_swap.o ./libft/libft.a -o push_swap
+ 
+cc push_swap.o srcs/arg_valid.o outils/operations.o outils/outils.o ./libft/libft.a -o push_swap
 make: Leaving directory `/Users/yassine/Desktop/42_project/push_swap'
  

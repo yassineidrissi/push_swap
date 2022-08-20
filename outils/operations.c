@@ -6,13 +6,13 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 19:19:41 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/16 22:25:42 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/20 21:53:23 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void swap(struct node **a)
+static void swap(struct node **a)
 {
 	int tmp;
 	if(!a || !*a || !(*a)->link)
@@ -41,17 +41,17 @@ void ss(struct node **a, struct node **b)
 	printf("ss\n");
 }
 
-void ft_printflst(t_node **a)
-{
-	while(*a)
-	{
-		printf("%d\n", (*a)->data);
-		(*a) = (*a)->link;
-	}
-	printf("\n");
-}
+// void ft_printflst(t_node **a)
+// {
+// 	while(*a)
+// 	{
+// 		printf("%d\n", (*a)->data);
+// 		(*a) = (*a)->link;
+// 	}
+// 	printf("\n");
+// }
 
-void ft_pushlst(t_node **a, t_node **b)
+static void ft_pushlst(t_node **a, t_node **b)
 {
 	if (!b || !(*b))
 		return ;
@@ -103,7 +103,7 @@ void pb(struct node **a, struct node **b)
 
 //! WE NEED TO LINK THE LAST NODE TO NULL IN ft_lstrangup
 
-void ft_lstrangeup(t_node **a)
+static void ft_lstrangeup(t_node **a)
 {
 	if (!a || !(*a))
 		return ;
@@ -170,7 +170,7 @@ void rr(t_node **a, t_node **b)
 //     printf("ra\n");
 // }
 
-void ft_lstrangedown(t_node **a)
+static void ft_lstrangedown(t_node **a)
 {
 	if (!a || !(*a))
 		return ;
