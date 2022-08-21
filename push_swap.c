@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 19:02:23 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/21 17:03:05 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/21 18:09:47 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int main(int ac, char ** av)
     ft_add_stacknode(stack_a, ac, av);
     ft_printflst(stack_a);
     //! we will see what to do in free for case of list is sorted
-    if(ft_lst_sorted(stack_a) == 0)
+    if(ft_lst_sorted(stack_a) == 1)
     {
         printf("list is sorted\n");
         // ft_free_lst((void *)stack_a);

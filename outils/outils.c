@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:37:03 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/21 16:37:20 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/21 18:08:37 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void ft_add_stacknode(struct node **stack_a, int ac, char **av)
 
 int ft_lst_sorted(t_node **a)
 {
-	while ((*a)->link)
+	while (*a)
 	{
 		if ((*a)->data > (*a)->link->data)
 		{
