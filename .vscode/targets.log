@@ -6,7 +6,6 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
 /Applications/Xcode.app/Contents/Developer/usr/bin/make -C ./libft
  
 # GNU Make 3.81
@@ -18,7 +17,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Sat Aug 20 21:39:24 2022
+# Make data base, printed on Sun Aug 21 03:38:29 2022
 
 # Variables
 
@@ -167,9 +166,9 @@ OBG_B = ${SRCS_B:.c=.o}
 
 # Directories
 
-# . (device 16777226, inode 33725480): 92 files, no impossibilities.
+# . (device 16777226, inode 33725480): 91 files, no impossibilities.
 
-# 92 files, no impossibilities in 1 directories.
+# 91 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -185,7 +184,7 @@ OBG_B = ${SRCS_B:.c=.o}
 ft_strmapi.o: ft_strmapi.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_strmapi'
-#  Last modified 2022-08-20 21:31:19
+#  Last modified 2022-08-21 03:38:12
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -197,7 +196,7 @@ ft_strmapi.o: ft_strmapi.c
 ft_lstiter.o: ft_lstiter.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_lstiter'
-#  Last modified 2022-08-20 21:31:20
+#  Last modified 2022-08-21 03:38:14
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -245,7 +244,7 @@ ft_lstadd_front.c:
 ft_memcpy.o: ft_memcpy.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_memcpy'
-#  Last modified 2022-08-20 21:31:15
+#  Last modified 2022-08-21 03:38:09
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -257,7 +256,7 @@ ft_memcpy.o: ft_memcpy.c
 ft_itoa.o: ft_itoa.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_itoa'
-#  Last modified 2022-08-20 21:31:18
+#  Last modified 2022-08-21 03:38:12
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -287,7 +286,8 @@ ft_lstdelone.c:
 ft_memcmp.o: ft_memcmp.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_memcmp'
-#  Last modified 2022-08-20 21:31:17
+ 
+#  Last modified 2022-08-21 03:38:11
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -299,7 +299,7 @@ ft_memcmp.o: ft_memcmp.c
 ft_strlen.o: ft_strlen.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_strlen'
-#  Last modified 2022-08-20 21:31:15
+#  Last modified 2022-08-21 03:38:09
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -312,7 +312,6 @@ ft_strlen.o: ft_strlen.c
 ft_memmove.c:
 #  Implicit rule search has been done.
 #  Last modified 2022-08-12 22:31:43
- 
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -321,7 +320,7 @@ ft_memmove.c:
 ft_isdigit.o: ft_isdigit.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_isdigit'
-#  Last modified 2022-08-20 21:31:14
+#  Last modified 2022-08-21 03:38:08
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -348,7 +347,7 @@ all: libft.a
 ft_lstlast.o: ft_lstlast.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_lstlast'
-#  Last modified 2022-08-20 21:31:20
+#  Last modified 2022-08-21 03:38:14
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -360,7 +359,7 @@ ft_lstlast.o: ft_lstlast.c
 ft_memchr.o: ft_memchr.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_memchr'
-#  Last modified 2022-08-20 21:31:17
+#  Last modified 2022-08-21 03:38:11
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -404,7 +403,7 @@ ft_putstr_fd.c:
 ft_tolower.o: ft_tolower.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_tolower'
-#  Last modified 2022-08-20 21:31:16
+#  Last modified 2022-08-21 03:38:10
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -416,7 +415,7 @@ ft_tolower.o: ft_tolower.c
 ft_strrchr.o: ft_strrchr.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_strrchr'
-#  Last modified 2022-08-20 21:31:17
+#  Last modified 2022-08-21 03:38:10
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -428,7 +427,7 @@ ft_strrchr.o: ft_strrchr.c
 ft_strjoin.o: ft_strjoin.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_strjoin'
-#  Last modified 2022-08-20 21:31:18
+#  Last modified 2022-08-21 03:38:12
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -440,7 +439,7 @@ ft_strjoin.o: ft_strjoin.c
 ft_split.o: ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_split'
-#  Last modified 2022-08-20 21:31:18
+#  Last modified 2022-08-21 03:38:12
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -452,8 +451,9 @@ ft_split.o: ft_split.c
 ft_lstclear.o: ft_lstclear.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_lstclear'
-#  Last modified 2022-08-20 21:31:20
+#  Last modified 2022-08-21 03:38:14
 #  File has been updated.
+ 
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
@@ -473,7 +473,7 @@ ft_putchar_fd.c:
 ft_strlcat.o: ft_strlcat.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_strlcat'
-#  Last modified 2022-08-20 21:31:16
+#  Last modified 2022-08-21 03:38:10
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -518,7 +518,7 @@ Makefile:
 ft_isprint.o: ft_isprint.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_isprint'
-#  Last modified 2022-08-20 21:31:15
+#  Last modified 2022-08-21 03:38:09
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -529,7 +529,7 @@ ft_isprint.o: ft_isprint.c
 
 libft.a: ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_strlen.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memmove.o ft_strlcpy.o ft_strlcat.o ft_toupper.o ft_tolower.o ft_strchr.o ft_strrchr.o ft_strncmp.o ft_memchr.o ft_memcmp.o ft_strnstr.o ft_atoi.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_striteri.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstadd_front.o ft_lstnew.o ft_lstsize.o ft_lstadd_front.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-08-20 21:31:21
+#  Last modified 2022-08-21 03:38:14
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -577,20 +577,19 @@ ft_lstiter.c:
 ft_striteri.o: ft_striteri.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_striteri'
-#  Last modified 2022-08-20 21:31:19
+#  Last modified 2022-08-21 03:38:12
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 #  commands to execute (from `Makefile', line 19):
- 
 	${CC} ${CFLAGS} -c $< -o $@
 	
 
 ft_bzero.o: ft_bzero.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_bzero'
-#  Last modified 2022-08-20 21:31:15
+#  Last modified 2022-08-21 03:38:09
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -611,7 +610,7 @@ ft_memcpy.c:
 ft_lstnew.o: ft_lstnew.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_lstnew'
-#  Last modified 2022-08-20 21:31:20
+#  Last modified 2022-08-21 03:38:13
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -677,7 +676,7 @@ bonus: ft_lstnew.o ft_lstsize.o ft_lstadd_front.o ft_lstlast.o ft_lstadd_back.o 
 ft_putnbr_fd.o: ft_putnbr_fd.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_putnbr_fd'
-#  Last modified 2022-08-20 21:31:19
+#  Last modified 2022-08-21 03:38:13
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -694,6 +693,7 @@ fclean: clean
 #  commands to execute (from `Makefile', line 32):
 	${RM} ${NAME}
 	
+ 
 
 # Not a target:
 ft_memset.c:
@@ -707,7 +707,7 @@ ft_memset.c:
 ft_calloc.o: ft_calloc.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_calloc'
-#  Last modified 2022-08-20 21:31:18
+#  Last modified 2022-08-21 03:38:11
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -719,7 +719,7 @@ ft_calloc.o: ft_calloc.c
 ft_substr.o: ft_substr.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_substr'
-#  Last modified 2022-08-20 21:31:18
+#  Last modified 2022-08-21 03:38:12
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -776,7 +776,7 @@ ft_lstclear.c:
 ft_isalpha.o: ft_isalpha.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_isalpha'
-#  Last modified 2022-08-20 21:31:14
+#  Last modified 2022-08-21 03:38:08
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -788,7 +788,7 @@ ft_isalpha.o: ft_isalpha.c
 ft_lstsize.o: ft_lstsize.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_lstsize'
-#  Last modified 2022-08-20 21:31:20
+#  Last modified 2022-08-21 03:38:13
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -809,7 +809,6 @@ ft_strlcat.c:
 #  Last modified 2022-08-12 22:31:43
 #  File has been updated.
 #  Successfully updated.
- 
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
@@ -834,7 +833,8 @@ ft_bzero.c:
 ft_strlcpy.o: ft_strlcpy.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_strlcpy'
-#  Last modified 2022-08-20 21:31:16
+ 
+#  Last modified 2022-08-21 03:38:10
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -855,7 +855,7 @@ ft_isprint.c:
 ft_lstmap.o: ft_lstmap.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_lstmap'
-#  Last modified 2022-08-20 21:31:21
+#  Last modified 2022-08-21 03:38:14
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -867,7 +867,7 @@ ft_lstmap.o: ft_lstmap.c
 ft_strncmp.o: ft_strncmp.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_strncmp'
-#  Last modified 2022-08-20 21:31:17
+#  Last modified 2022-08-21 03:38:10
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -894,7 +894,7 @@ clean:
 ft_isalnum.o: ft_isalnum.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_isalnum'
-#  Last modified 2022-08-20 21:31:14
+#  Last modified 2022-08-21 03:38:09
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -906,7 +906,7 @@ ft_isalnum.o: ft_isalnum.c
 ft_lstadd_front.o: ft_lstadd_front.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_lstadd_front'
-#  Last modified 2022-08-20 21:31:20
+#  Last modified 2022-08-21 03:38:13
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -918,7 +918,7 @@ ft_lstadd_front.o: ft_lstadd_front.c
 ft_strdup.o: ft_strdup.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_strdup'
-#  Last modified 2022-08-20 21:31:18
+#  Last modified 2022-08-21 03:38:11
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -930,7 +930,7 @@ ft_strdup.o: ft_strdup.c
 ft_lstdelone.o: ft_lstdelone.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_lstdelone'
-#  Last modified 2022-08-20 21:31:20
+#  Last modified 2022-08-21 03:38:14
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -942,7 +942,7 @@ ft_lstdelone.o: ft_lstdelone.c
 ft_memmove.o: ft_memmove.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_memmove'
-#  Last modified 2022-08-20 21:31:16
+#  Last modified 2022-08-21 03:38:09
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -954,7 +954,7 @@ ft_memmove.o: ft_memmove.c
 ft_strchr.o: ft_strchr.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_strchr'
-#  Last modified 2022-08-20 21:31:16
+#  Last modified 2022-08-21 03:38:10
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -975,7 +975,7 @@ ft_lstnew.c:
 ft_toupper.o: ft_toupper.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_toupper'
-#  Last modified 2022-08-20 21:31:16
+#  Last modified 2022-08-21 03:38:10
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -996,7 +996,7 @@ ft_atoi.c:
 ft_strnstr.o: ft_strnstr.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_strnstr'
-#  Last modified 2022-08-20 21:31:17
+#  Last modified 2022-08-21 03:38:11
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1008,7 +1008,7 @@ ft_strnstr.o: ft_strnstr.c
 ft_putstr_fd.o: ft_putstr_fd.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_putstr_fd'
-#  Last modified 2022-08-20 21:31:19
+#  Last modified 2022-08-21 03:38:13
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1029,7 +1029,7 @@ ft_putnbr_fd.c:
 ft_atoi.o: ft_atoi.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_atoi'
-#  Last modified 2022-08-20 21:31:17
+#  Last modified 2022-08-21 03:38:11
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1059,7 +1059,7 @@ ft_substr.c:
 ft_memset.o: ft_memset.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_memset'
-#  Last modified 2022-08-20 21:31:15
+#  Last modified 2022-08-21 03:38:09
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1071,7 +1071,7 @@ ft_memset.o: ft_memset.c
 ft_putchar_fd.o: ft_putchar_fd.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_putchar_fd'
-#  Last modified 2022-08-20 21:31:19
+#  Last modified 2022-08-21 03:38:12
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1083,7 +1083,7 @@ ft_putchar_fd.o: ft_putchar_fd.c
 ft_isascii.o: ft_isascii.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_isascii'
-#  Last modified 2022-08-20 21:31:15
+#  Last modified 2022-08-21 03:38:09
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1095,7 +1095,6 @@ ft_isascii.o: ft_isascii.c
 # Not a target:
 ft_lstsize.c:
 #  Implicit rule search has been done.
- 
 #  Last modified 2022-08-20 21:20:22
 #  File has been updated.
 #  Successfully updated.
@@ -1114,10 +1113,11 @@ ft_striteri.c:
 ft_strtrim.o: ft_strtrim.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_strtrim'
-#  Last modified 2022-08-20 21:31:18
+#  Last modified 2022-08-21 03:38:12
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
+ 
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 #  commands to execute (from `Makefile', line 19):
 	${CC} ${CFLAGS} -c $< -o $@
@@ -1135,7 +1135,7 @@ ft_lstlast.c:
 ft_lstadd_back.o: ft_lstadd_back.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_lstadd_back'
-#  Last modified 2022-08-20 21:31:20
+#  Last modified 2022-08-21 03:38:14
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1156,7 +1156,7 @@ ft_strlcpy.c:
 ft_putendl_fd.o: ft_putendl_fd.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `ft_putendl_fd'
-#  Last modified 2022-08-20 21:31:19
+#  Last modified 2022-08-21 03:38:13
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1178,11 +1178,11 @@ ft_putendl_fd.o: ft_putendl_fd.c
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sat Aug 20 21:39:24 2022
+# Finished Make data base on Sun Aug 21 03:38:29 2022
 
  
 
-# Make data base, printed on Sat Aug 20 21:39:24 2022
+# Make data base, printed on Sun Aug 21 03:38:29 2022
 
 # Variables
 
@@ -1200,13 +1200,13 @@ ft_putendl_fd.o: ft_putendl_fd.c
 CURDIR := /Users/yassine/Desktop/42_project/push_swap
 # makefile
 SHELL = /bin/sh
-# makefile (from `Makefile', line 50)
+# makefile (from `Makefile', line 51)
 RM = rm -rf
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
-# makefile (from `Makefile', line 49)
+# makefile (from `Makefile', line 50)
 CFLAGS = -Wall -Wextra -Werror
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
@@ -1214,7 +1214,7 @@ MAKEFILE_LIST :=  Makefile
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 VSCODE_CWD = /
-# makefile (from `Makefile', line 43)
+# makefile (from `Makefile', line 44)
 OBJES = ${SRCS:.c=.o}
 # environment
 PATH = /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
@@ -1253,14 +1253,14 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # makefile (from `Makefile', line 16)
-SRCS = push_swap.c srcs/arg_valid.c outils/operations.c outils/outils.c 
+SRCS = push_swap.c srcs/arg_valid.c outils/operations.c outils/outils.c sort_lst_man.c 
 # environment
 SHLVL = 1
 # makefile (from `Makefile', line 14)
 LIBFT = $(LIBFT_PATH)/libft.a
-# makefile (from `Makefile', line 48)
+# makefile (from `Makefile', line 49)
 CC = cc
-# makefile (from `Makefile', line 44)
+# makefile (from `Makefile', line 45)
 OBJES_B = ${SRCS_B:.c=.o}
 # default
 MAKE_VERSION := 3.81
@@ -1268,7 +1268,7 @@ MAKE_VERSION := 3.81
 USER = yassine
 # makefile
 .DEFAULT_GOAL := all
-# makefile (from `Makefile', line 46)
+# makefile (from `Makefile', line 47)
 NAME = push_swap
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
@@ -1316,7 +1316,7 @@ LC_ALL = C
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
-# makefile (from `Makefile', line 31)
+# makefile (from `Makefile', line 32)
 SRCS_B = checker.c utils/arg_valid.c utils/initStack.c utils/link_list.c utils/is_sorted.c operations/operations_push.c operations/operations_rev_rotate.c operations/operations_rotate.c operations/operations_swap.c sort_simple.c utile_sort_simple.c radix_sort.c
 # default
 .INCLUDE_DIRS = /usr/local/include
@@ -1326,11 +1326,10 @@ MAKELEVEL := 0
 LANG = C
 # environment
 VSCODE_PID = 24526
-# makefile (from `Makefile', line 47)
+# makefile (from `Makefile', line 48)
 NAME_B = checker
 # variable set hash-table stats:
- 
-# Load=71/1024=7%, Rehash=0, Collisions=1/124=1%
+# Load=71/1024=7%, Rehash=0, Collisions=1/120=1%
 
 # Pattern-specific Variable Values
 
@@ -1339,15 +1338,15 @@ NAME_B = checker
 # Directories
 
 # outils (device 16777226, inode 34089086): 7 files, no impossibilities so far.
-# . (device 16777226, inode 33702387): 17 files, no impossibilities.
+# . (device 16777226, inode 33702387): 16 files, no impossibilities.
 # srcs (device 16777226, inode 33729609): 5 files, no impossibilities so far.
 
-# 29 files, no impossibilities in 3 directories.
+# 28 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
 %.o: %.c
-#  commands to execute (from `Makefile', line 53):
+#  commands to execute (from `Makefile', line 54):
 	$(CC) ${CFLAGS} -c $< -o $@
 	
 
@@ -1376,7 +1375,7 @@ radix_sort.o:
 # Not a target:
 push_swap.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-20 21:11:30
+#  Last modified 2022-08-21 03:36:08
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1385,7 +1384,7 @@ push_swap.c:
 # Not a target:
 srcs/arg_valid.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-18 18:54:17
+#  Last modified 2022-08-20 22:46:06
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1399,7 +1398,7 @@ all: push_swap
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/13=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/9=0%
 
 # Not a target:
 utils/initStack.o:
@@ -1412,10 +1411,38 @@ utils/initStack.o:
 #  Modification time never checked.
 #  File has not been updated.
 
+sort_lst_man.o: sort_lst_man.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `sort_lst_man'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := sort_lst_man.o
+# automatic
+# % := 
+# automatic
+# * := sort_lst_man
+# automatic
+# + := sort_lst_man.c
+# automatic
+# | := 
+# automatic
+# < := sort_lst_man.c
+# automatic
+# ^ := sort_lst_man.c
+# automatic
+# ? := sort_lst_man.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
+#  commands to execute (from `Makefile', line 54):
+	$(CC) ${CFLAGS} -c $< -o $@
+	
+
 # Not a target:
 outils/operations.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-20 20:10:37
+#  Last modified 2022-08-20 21:53:23
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1423,12 +1450,9 @@ outils/operations.c:
 
 # Not a target:
 push_swap.h:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-20 20:33:55
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .SUFFIXES:
@@ -1439,7 +1463,7 @@ push_swap.h:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-20 21:31:13
+#  Last modified 2022-08-21 03:38:06
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1454,12 +1478,12 @@ utils/arg_valid.o:
 outils/outils.o: outils/outils.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `outils/outils'
-#  Last modified 2022-08-20 21:31:21
+#  Last modified 2022-08-21 03:38:15
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 53):
+#  commands to execute (from `Makefile', line 54):
 	$(CC) ${CFLAGS} -c $< -o $@
 	
 
@@ -1476,6 +1500,7 @@ libft/libft.a:
 #  File does not exist.
 #  File has been updated.
 #  Successfully updated.
+ 
 # automatic
 # @ := libft/libft.a
 # automatic
@@ -1494,7 +1519,7 @@ libft/libft.a:
 # ? := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=2/13=15%
-#  commands to execute (from `Makefile', line 65):
+#  commands to execute (from `Makefile', line 66):
 	$(MAKE) -C $(LIBFT_PATH)
 	
 
@@ -1508,11 +1533,20 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 75):
+#  commands to execute (from `Makefile', line 76):
 	$(MAKE) -C $(LIBFT_PATH) fclean
 	$(RM) $(NAME)
 	$(RM) $(NAME_B)
 	
+
+# Not a target:
+sort_lst_man.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-21 03:37:05
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 operations/operations_push.o:
@@ -1531,13 +1565,12 @@ checker.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
 
 checker: libft/libft.a checker.o utils/arg_valid.o utils/initStack.o utils/link_list.o utils/is_sorted.o operations/operations_push.o operations/operations_rev_rotate.o operations/operations_rotate.o operations/operations_swap.o sort_simple.o utile_sort_simple.o radix_sort.o push_swap.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 62):
+#  commands to execute (from `Makefile', line 63):
 	$(CC) $(OBJES_B) ${LIBFT} -o $(NAME_B)
 	
 
@@ -1552,7 +1585,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 70):
+#  commands to execute (from `Makefile', line 71):
 	$(MAKE) -C $(LIBFT_PATH) clean
 	$(RM) $(OBJES)
 	$(RM) $(OBJES_B)
@@ -1561,47 +1594,30 @@ clean:
 push_swap.o: push_swap.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `push_swap'
-#  Last modified 2022-08-20 21:31:21
+#  Last modified 2022-08-21 03:38:14
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 53):
+#  commands to execute (from `Makefile', line 54):
 	$(CC) ${CFLAGS} -c $< -o $@
 	
 
-push_swap: libft/libft.a push_swap.o srcs/arg_valid.o outils/operations.o outils/outils.o push_swap.h
+push_swap: libft/libft.a push_swap.o srcs/arg_valid.o outils/operations.o outils/outils.o sort_lst_man.o push_swap.h
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: `'
-#  Last modified 2022-08-20 21:31:21
+#  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
-# automatic
-# @ := push_swap
-# automatic
-# % := 
-# automatic
-# * := 
-# automatic
-# + := libft/libft.a push_swap.o srcs/arg_valid.o outils/operations.o outils/outils.o push_swap.h
-# automatic
-# | := 
-# automatic
-# < := libft/libft.a
-# automatic
-# ^ := libft/libft.a push_swap.o srcs/arg_valid.o outils/operations.o outils/outils.o push_swap.h
-# automatic
-# ? := 
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/21=5%
-#  commands to execute (from `Makefile', line 59):
+# Load=0/32=0%, Rehash=0, Collisions=0/9=0%
+#  commands to execute (from `Makefile', line 60):
 	$(CC) $(OBJES) ${LIBFT} -o $(NAME)
 	
 
 # Not a target:
 outils/outils.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-20 20:04:18
+#  Last modified 2022-08-21 02:50:22
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1610,12 +1626,12 @@ outils/outils.c:
 srcs/arg_valid.o: srcs/arg_valid.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `srcs/arg_valid'
-#  Last modified 2022-08-20 21:31:21
+#  Last modified 2022-08-21 03:38:14
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 53):
+#  commands to execute (from `Makefile', line 54):
 	$(CC) ${CFLAGS} -c $< -o $@
 	
 
@@ -1634,12 +1650,12 @@ operations/operations_rotate.o:
 outils/operations.o: outils/operations.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `outils/operations'
-#  Last modified 2022-08-20 21:31:21
+#  Last modified 2022-08-21 03:38:15
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 53):
+#  commands to execute (from `Makefile', line 54):
 	$(CC) ${CFLAGS} -c $< -o $@
 	
 
@@ -1656,7 +1672,7 @@ utile_sort_simple.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=33/1024=3%, Rehash=0, Collisions=8/90=9%
+# Load=35/1024=3%, Rehash=0, Collisions=9/95=9%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -1668,6 +1684,6 @@ utile_sort_simple.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sat Aug 20 21:39:24 2022
+# Finished Make data base on Sun Aug 21 03:38:29 2022
 
  

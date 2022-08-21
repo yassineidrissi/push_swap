@@ -6,7 +6,7 @@
 #    By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/12 22:48:21 by yaidriss          #+#    #+#              #
-#    Updated: 2022/08/20 21:31:13 by yaidriss         ###   ########.fr        #
+#    Updated: 2022/08/21 03:38:06 by yaidriss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ SRCS			= 	push_swap.c \
 					srcs/arg_valid.c \
 					outils/operations.c\
 					outils/outils.c\
+					sort_lst_man.c\
 					# utils/arg_valid.c \
 					# utils/initStack.c \
 					# utils/link_list.c \

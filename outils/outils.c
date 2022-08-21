@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:37:03 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/20 22:53:00 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/21 16:37:20 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,10 @@ void ft_add_node(t_node **lst, int data)
 	ft_lstadd_back(lst,tmp);
 }
 
-void ft_free_lst(char **lst)
+void ft_free_lst(void **lst)
 {
-	int i;
-
-	i = 0;
-	while(lst[i])
-		free(lst[i++]);
+	while(*lst)
+		free(*lst++);
 	free(lst);
 }
 
@@ -67,7 +64,35 @@ void ft_add_stacknode(struct node **stack_a, int ac, char **av)
 		new = ft_lstnew(ft_atoi(tmp[i++]));
 		ft_lstadd_back(stack_a, new);
 	}
-	if (ac == 2)
-		ft_free_lst(tmp);
+	// if (ac == 2)
+		// ft_free_lst((void *)tmp);
 	//ft_index_sort(stack_a);
+}
+
+int ft_lst_sorted(t_node **a)
+{
+	while ((*a)->link)
+	{
+		if ((*a)->data > (*a)->link->data)
+		{
+			printf("the function lst sorted is sorted by 0\n");
+			return (0);
+		}
+		(*a) = (*a)->link;
+	}
+	return (1);
+}
+
+int	ft_lst_lenght(t_node **a)
+{
+	int i;
+
+	i = 1;
+	while (*a)
+	{
+		i++;
+		(*a) = (*a)->link;
+	}
+	printf("the length of the lst is %d\n", i);
+	return (i);
 }
