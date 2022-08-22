@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:37:03 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/21 18:08:37 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/22 10:01:14 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ void ft_free_lst(void **lst)
 void ft_add_stacknode(struct node **stack_a, int ac, char **av)
 {
 	char **tmp;
-	t_node *new;
 	int i;
 	
 	i = 0;
@@ -60,25 +59,23 @@ void ft_add_stacknode(struct node **stack_a, int ac, char **av)
 	else
 		tmp = av + 1;
 	while (tmp[i])
-	{
-		new = ft_lstnew(ft_atoi(tmp[i++]));
-		ft_lstadd_back(stack_a, new);
-	}
+		ft_lstadd_back(stack_a, ft_lstnew(ft_atoi(tmp[i++])));
 	// if (ac == 2)
 		// ft_free_lst((void *)tmp);
 	//ft_index_sort(stack_a);
 }
 
-int ft_lst_sorted(t_node **a)
+int ft_lst_sorted(t_node *a)
 {
-	while (*a)
+	int A;
+	int B;
+	while (a != NULL)
 	{
-		if ((*a)->data > (*a)->link->data)
-		{
-			printf("the function lst sorted is sorted by 0\n");
+		A = a->data;
+		B = a->link->data;
+		if (A > B)
 			return (0);
-		}
-		(*a) = (*a)->link;
+		a = a->link;
 	}
 	return (1);
 }

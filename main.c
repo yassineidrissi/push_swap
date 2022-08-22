@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/27 09:00:06 by yidrissi          #+#    #+#             */
-/*   Updated: 2022/08/22 09:53:52 by yaidriss         ###   ########.fr       */
+/*   Created: 2022/08/22 01:22:08 by yaidriss          #+#    #+#             */
+/*   Updated: 2022/08/22 01:23:58 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-int	ft_lstsize(t_node	*lst)
+int main()
 {
-	int	i;
-
-	i = 0;
-	while (lst)
-	{
-		lst = lst->link;
-		i++;
-	}
-	return (i);
+	printf("test");	
 }

@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 19:02:23 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/21 18:09:47 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/21 20:38:27by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,17 @@
 
 void ft_printflst(t_node **a)
 {
-	while(*a)
-	{
-		printf("%d\n", (*a)->data);
-		(*a) = (*a)->link;
-	}
-	printf("\n");
+    while (*a)
+    {
+        printf("%d\n", (*a)->data);
+        a = &(*a)->link;
+    }
 }
 
 static void ft_sort_lst(t_node **a, t_node **b)
 {
     if (ft_lstsize(*a) <= 5)
-        ft_sort_man(a, b);
+       ft_sort_man(a, b);
     // ft_sort_auto(a);
 }
 
@@ -46,7 +45,7 @@ int main(int ac, char ** av)
     ft_add_stacknode(stack_a, ac, av);
     ft_printflst(stack_a);
     //! we will see what to do in free for case of list is sorted
-    if(ft_lst_sorted(stack_a) == 1)
+    if(ft_lst_sorted(*stack_a))
     {
         printf("list is sorted\n");
         // ft_free_lst((void *)stack_a);

@@ -2,18 +2,6 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(lldb) Launch",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${workspaceFolder}/push_swap",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "lldb"
-    },
-    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
@@ -22,7 +10,8 @@
       "externalConsole": false,
       "cwd": "/Users/yassine/Desktop/42_project/push_swap",
       "program": "/Users/yassine/Desktop/42_project/push_swap/build/Debug/outDebug",
-      "MIMode": "gdb"
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb"
     }
   ]
 }

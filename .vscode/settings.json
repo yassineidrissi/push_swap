@@ -27,8 +27,5 @@
     "**/.*/**",
     "**/.vscode",
     "**/.vscode/**"
-  ],
-  "files.associations": {
-    "libft.h": "c"
-  }
+  ]
 }
