@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 01:52:40 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/22 10:23:29 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/22 12:39:13 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,26 +19,41 @@
 // (0 > 1 | 1 < 2 | 0 > 2) 3 1 2->ra 
 // (0 > 1 | 1 > 2 | 0 > 2) 3 2 1->sa rra
 
-int ft_index_sort(t_node **a)
+int	ft_index_sort(t_node **a)
 {
-	int i;
+	int		min;
+	int		i;
+	t_node	*tmp;
 
+	tmp = *a;
 	i = 0;
-	while(*a)
-	
+	while (*a)
+	{
+		if ((*a)->data < (*a)->link->data)
+			min = (*a)->data;
+		a = &(*a)->link;
+	}
+	while (tmp)
+	{
+		if (tmp->data == min)
+			return (i);
+		tmp = tmp->link;
+		i++;
+	}
+	return (0);
 }
 
-void ft_sort_three(t_node **a)
+void	ft_sort_three(t_node **a)
 {
 	if ((*a)->data < (*a)->link->data && (*a)->link->data > (*a)->link->link->data && (*a)->data > (*a)->link->link->data)
+		rra(a);
+	else if ((*a)->data > (*a)->link->data && (*a)->link->data < (*a)->link->link->data && (*a)->data > (*a)->link->link->data)
+		sa(a);
+	else if ((*a)->data < (*a)->link->data && (*a)->link->data > (*a)->link->link->data && (*a)->data < (*a)->link->link->data)
 	{
 		rra(a);
 		sa(a);
 	}	
-	else if ((*a)->data > (*a)->link->data && (*a)->link->data < (*a)->link->link->data && (*a)->data > (*a)->link->link->data)
-		sa(a);
-	else if ((*a)->data < (*a)->link->data && (*a)->link->data > (*a)->link->link->data && (*a)->data < (*a)->link->link->data)
-		rra(a);
 	else if ((*a)->data > (*a)->link->data && (*a)->link->data < (*a)->link->link->data && (*a)->data < (*a)->link->link->data)
 		ra(a);
 	else

@@ -6,21 +6,21 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:37:03 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/22 10:01:14 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/22 12:03:36 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int *ft_atoi_lst(char **str)
+int	*ft_atoi_lst(char **str)
 {
-	int *lst;
-	int i;
-	int j;
+	int	*lst;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
-	while(str[i])
+	while (str[i])
 		i++;
 	lst = (int *)malloc(sizeof(int) * i);
 	while (*str)
@@ -31,28 +31,28 @@ int *ft_atoi_lst(char **str)
 	return (lst);
 }
 
-void ft_add_node(t_node **lst, int data)
+void	ft_add_node(t_node **lst, int data)
 {
-	t_node *tmp;
+	t_node	*tmp;
+
 	tmp = (t_node *)malloc(sizeof(t_node));
 	tmp->data = data;
 	tmp->link = NULL;
-	ft_lstadd_back(lst,tmp);
+	ft_lstadd_back(lst, tmp);
 }
 
-void ft_free_lst(void **lst)
+void	ft_free_lst(void **lst)
 {
-	while(*lst)
+	while (*lst)
 		free(*lst++);
 	free(lst);
 }
 
-
-void ft_add_stacknode(struct node **stack_a, int ac, char **av)
+void	ft_add_stacknode(struct node **stack_a, int ac, char **av)
 {
-	char **tmp;
-	int i;
-	
+	char	**tmp;
+	int		i;
+
 	i = 0;
 	if (ac == 2)
 		tmp = ft_split(av[1], ' ');
@@ -65,10 +65,11 @@ void ft_add_stacknode(struct node **stack_a, int ac, char **av)
 	//ft_index_sort(stack_a);
 }
 
-int ft_lst_sorted(t_node *a)
+int	ft_lst_sorted(t_node *a)
 {
-	int A;
-	int B;
+	int	A;
+	int	B;
+
 	while (a != NULL)
 	{
 		A = a->data;
@@ -82,7 +83,7 @@ int ft_lst_sorted(t_node *a)
 
 int	ft_lst_lenght(t_node **a)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	while (*a)
