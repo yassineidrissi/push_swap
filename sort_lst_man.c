@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 01:52:40 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/23 15:20:56 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/23 20:06:28 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void ft_sort_four(t_node **a, t_node **b)
 		sa(a);
 		pb(a,b);
 		ft_sort_three(a);
-		pb(a,b);
+		pa(a,b);
 	}
 	else if(ft_index_sort(a) == 2)
 	{
@@ -92,6 +92,45 @@ void ft_sort_four(t_node **a, t_node **b)
 		pb(a,b);
 		ft_sort_three(a);
 		pa(a,b);
+	}
+	else
+	{
+		rra(a);
+		pb(a,b);
+		ft_sort_three(a);
+		pa(a, b);
+	}
+}
+
+void ft_sort_five(t_node **a, t_node **b)
+{
+	if(ft_index_sort(a) == 0)
+	{
+		pb(a, b);
+		ft_sort_four(a,b);
+		pa(a, b);
+	}
+	else if(ft_index_sort(a) == 1)
+	{
+		sa(a);
+		pb(a,b);
+		ft_sort_four(a,b);
+		pa(a,b);
+	}
+	else if(ft_index_sort(a) == 2)
+	{
+		ra(a);
+		ra(a);
+		pb(a,b);
+		ft_sort_four(a,b);
+		pa(a,b);
+	}
+	else if(ft_index_sort(a) == 3)
+	{
+		rra(a);
+		pb(a, b);
+		ft_sort_three(a);
+		pa(a, b);
 	}
 	else
 	{
@@ -111,4 +150,6 @@ void ft_sort_man(t_node **a, t_node **b)
 		ft_sort_three(a);
 	else if(ft_lstsize(*a) == 4)
 		ft_sort_four(a, b);
+	else
+		ft_sort_five(a, b);
 }
