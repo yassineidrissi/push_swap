@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:37:03 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/22 12:03:36 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/22 14:54:30 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,18 +65,18 @@ void	ft_add_stacknode(struct node **stack_a, int ac, char **av)
 	//ft_index_sort(stack_a);
 }
 
-int	ft_lst_sorted(t_node *a)
+int	ft_lst_sorted(t_node **a)
 {
 	int	A;
 	int	B;
 
-	while (a != NULL)
+	while (*a)
 	{
-		A = a->data;
-		B = a->link->data;
+		A = (*a)->data;
+		B = (*a)->link->data;
 		if (A > B)
 			return (0);
-		a = a->link;
+		a = &(*a)->link;
 	}
 	return (1);
 }

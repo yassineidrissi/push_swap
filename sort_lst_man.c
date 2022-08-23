@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 01:52:40 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/22 12:39:13 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/23 15:20:56 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,26 +18,34 @@
 // (0 < 1 | 1 > 2 | 0 > 2) 2 3 1->rra
 // (0 > 1 | 1 < 2 | 0 > 2) 3 1 2->ra 
 // (0 > 1 | 1 > 2 | 0 > 2) 3 2 1->sa rra
-
+//! work with a directly to test the if the order is work.
 int	ft_index_sort(t_node **a)
 {
 	int		min;
 	int		i;
-	t_node	*tmp;
+	t_node	**tmp;
 
-	tmp = *a;
-	i = 0;
-	while (*a)
+	tmp = (t_node **)malloc(sizeof(t_node *));
+	*tmp = *a;
+	min = (*a)->data;
+	i = -1;
+	while ((*tmp)->link)
 	{
-		if ((*a)->data < (*a)->link->data)
-			min = (*a)->data;
-		a = &(*a)->link;
+		if ((*tmp)->data > (*tmp)->link->data && min > (*tmp)->link->data)
+			min = (*tmp)->link->data;
+		*tmp = (*tmp)->link;
 	}
-	while (tmp)
+	// printf("min is %d\n", min);
+	i = 0;
+	*tmp = *a;
+	while (*tmp)
 	{
-		if (tmp->data == min)
+		if ((*tmp)->data == min)
+		{
+			// printf("index is %d\n", i);
 			return (i);
-		tmp = tmp->link;
+		}
+		*tmp = (*tmp)->link;
 		i++;
 	}
 	return (0);
@@ -48,14 +56,14 @@ void	ft_sort_three(t_node **a)
 	if ((*a)->data < (*a)->link->data && (*a)->link->data > (*a)->link->link->data && (*a)->data > (*a)->link->link->data)
 		rra(a);
 	else if ((*a)->data > (*a)->link->data && (*a)->link->data < (*a)->link->link->data && (*a)->data > (*a)->link->link->data)
-		sa(a);
+		ra(a);
 	else if ((*a)->data < (*a)->link->data && (*a)->link->data > (*a)->link->link->data && (*a)->data < (*a)->link->link->data)
 	{
 		rra(a);
 		sa(a);
 	}	
 	else if ((*a)->data > (*a)->link->data && (*a)->link->data < (*a)->link->link->data && (*a)->data < (*a)->link->link->data)
-		ra(a);
+		sa(a);
 	else
 	{
 		sa(a);
@@ -102,5 +110,5 @@ void ft_sort_man(t_node **a, t_node **b)
 	else if(ft_lstsize(*a) == 3)
 		ft_sort_three(a);
 	else if(ft_lstsize(*a) == 4)
-		ft_sort_four(a, b); 
+		ft_sort_four(a, b);
 }

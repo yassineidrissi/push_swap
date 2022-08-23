@@ -35,17 +35,16 @@ int main(int ac, char ** av)
 
     if(ac < 2)
         return 1;
-    printf("your corent stack is:\n");
     ft_arg_is_valid(ac, av);
     stack_a = (t_node **)malloc(sizeof(t_node*));
     stack_b = (t_node **)malloc(sizeof(t_node*));
-    printf("your corent stack is: 1\n");
+    printf("your corent stack is: \n");
+    // ft_printflst(stack_a);
     *stack_a = NULL;
     *stack_b = NULL;
     ft_add_stacknode(stack_a, ac, av);
-    ft_printflst(stack_a);
     //! we will see what to do in free for case of list is sorted
-    if(ft_lst_sorted(*stack_a))
+    if(ft_lst_sorted(stack_a) == 1)
     {
         printf("list is sorted\n");
         // ft_free_lst((void *)stack_a);

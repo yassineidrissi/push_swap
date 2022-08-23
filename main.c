@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 01:22:08 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/22 01:23:58 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/22 17:25:14 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 int main()
 {
-	printf("test");	
+	printf("test");
+	printf("test");
+	printf("test");
+	printf("test");
+		
 }

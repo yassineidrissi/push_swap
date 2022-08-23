@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 21:28:35 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/21 19:41:27 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/22 14:53:39 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void 	rrr(t_node **a, t_node **b);
 
 void	ft_add_stacknode(t_node **stack_a, int ac, char **av);
 void	ft_free_lst(void **lst);
-int		ft_lst_sorted(t_node *a);
+int		ft_lst_sorted(t_node **a);
 int 	ft_lst_lenght(t_node **a);
 
 //************** sort *******************//
