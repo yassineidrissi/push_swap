@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 01:14:21 by yidrissi          #+#    #+#             */
-/*   Updated: 2022/08/20 21:29:35 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/24 19:14:22 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typedef struct s_list
 typedef struct node
 {
     int data;
-    struct node *previous;
+    int index;
     struct node *link;
 } t_node;
 

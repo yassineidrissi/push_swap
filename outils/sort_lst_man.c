@@ -6,11 +6,11 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 01:52:40 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/23 20:06:28 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/25 13:14:04 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 //! the methode behande this chose is
 // (0 < 1 | 1 > 2 | 0 < 2) 1 3 2->rra sa
@@ -18,7 +18,7 @@
 // (0 < 1 | 1 > 2 | 0 > 2) 2 3 1->rra
 // (0 > 1 | 1 < 2 | 0 > 2) 3 1 2->ra 
 // (0 > 1 | 1 > 2 | 0 > 2) 3 2 1->sa rra
-//! work with a directly to test the if the order is work.
+//! work with a directly to test if the order is work.
 int	ft_index_sort(t_node **a)
 {
 	int		min;
@@ -42,7 +42,7 @@ int	ft_index_sort(t_node **a)
 	{
 		if ((*tmp)->data == min)
 		{
-			// printf("index is %d\n", i);
+			printf("index is %d\n", i);
 			return (i);
 		}
 		*tmp = (*tmp)->link;
@@ -71,7 +71,10 @@ void	ft_sort_three(t_node **a)
 	}
 }
 void ft_sort_four(t_node **a, t_node **b)
-{
+{	
+	int i;
+	i = ft_index_sort(a);
+	printf("sort index in 4 is %d",i);
 	if(ft_index_sort(a) == 0)
 	{
 		pb(a, b);
@@ -129,14 +132,14 @@ void ft_sort_five(t_node **a, t_node **b)
 	{
 		rra(a);
 		pb(a, b);
-		ft_sort_three(a);
+		ft_sort_four(a, b);
 		pa(a, b);
 	}
 	else
 	{
 		rra(a);
 		pb(a,b);
-		ft_sort_three(a);
+		ft_sort_four(a, b);
 		pa(a, b);
 	}
 }

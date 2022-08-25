@@ -5,27 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/17 19:02:23 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/21 20:38:27by yaidriss         ###   ########.fr       */
+/*   Created: 2022/08/24 18:40:13 by yaidriss          #+#    #+#             */
+/*   Updated: 2022/08/25 13:17:07 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_printflst(t_node **a)
+void  ft_printflst(t_node **a)
 {
-    while (*a)
+    t_node **lst;
+    lst = malloc(sizeof(t_node **));
+    *lst = *a;
+    while (*lst)
     {
-        printf("%d\n", (*a)->data);
-        a = &(*a)->link;
+        printf("%d \n", (*lst)->data);
+        *lst = (*lst)->link;
     }
+    // ft_free_lst(lst);
 }
 
 static void ft_sort_lst(t_node **a, t_node **b)
 {
-    if (ft_lstsize(*a) <= 5)
+    if (ft_lstsize(*a) <= 5)      
        ft_sort_man(a, b);
-    // ft_sort_auto(a);
+    else
+    {
+        ft_init_index(a);
+        printf("ft_int_is_working %d\n",(*a)->index);
+        ft_sort_index(a);
+		printf("ft_sort is working %d\n",(*a)->index);
+        ft_sort_radix(a, b);     
+    }
 }
 
 int main(int ac, char ** av)
@@ -39,7 +50,7 @@ int main(int ac, char ** av)
     stack_a = (t_node **)malloc(sizeof(t_node*));
     stack_b = (t_node **)malloc(sizeof(t_node*));
     printf("your corent stack is: \n");
-    // ft_printflst(stack_a);
+    ft_printflst(stack_a);
     *stack_a = NULL;
     *stack_b = NULL;
     ft_add_stacknode(stack_a, ac, av);

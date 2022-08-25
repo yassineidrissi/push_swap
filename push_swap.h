@@ -6,11 +6,11 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 21:28:35 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/22 14:53:39 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/25 13:05:44 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP
+#ifndef	PUSH_SWAP
 #define PUSH_SWAP
 
 
@@ -29,6 +29,7 @@
 # define RRB 6
 # define SB 7
 # define SA 8
+# define MAXINT 2147483647
 
 typedef struct	s_stk
 {
@@ -66,7 +67,6 @@ void 	rrr(t_node **a, t_node **b);
 
 //************** outils *******************//
 
-
 void	ft_add_stacknode(t_node **stack_a, int ac, char **av);
 void	ft_free_lst(void **lst);
 int		ft_lst_sorted(t_node **a);
@@ -74,8 +74,10 @@ int 	ft_lst_lenght(t_node **a);
 
 //************** sort *******************//
 void	ft_sort_man(t_node **a, t_node **b);
-void	ft_sort_auto(t_node **a, t_node **b);
-
+void	ft_sort_radix(t_node **a, t_node **b);
+void	ft_init_index(t_node **a);
+void	ft_sort_index(t_node ** a);
+int		ft_index_sort(t_node ** a);
 
 
 //*************valid arg*******************//

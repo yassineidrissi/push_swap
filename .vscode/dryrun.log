@@ -1,0 +1,11 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/yassine/Desktop/42_project/push_swap'
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C ./libft
+make[1]: Entering directory `/Users/yassine/Desktop/42_project/push_swap/libft'
+make[1]: `libft.a' is up to date.
+make[1]: Leaving directory `/Users/yassine/Desktop/42_project/push_swap/libft'
+ 
+cc -Wall -Wextra -Werror -c outils/sort_lst_man.c -o outils/sort_lst_man.o
+cc push_swap.o srcs/arg_valid.o outils/operations.o outils/outils.o outils/sort_lst_radix.o outils/sort_lst_man.o ./libft/libft.a -o push_swap
+make: Leaving directory `/Users/yassine/Desktop/42_project/push_swap'
+ 
