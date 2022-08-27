@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 18:25:30 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/25 16:43:29 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/27 03:16:33 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,38 +49,27 @@ void	ft_sort_radix(t_node **a, t_node **b)
 	int	max_pos;
 	int i;
 	int j;
-	t_node **lst;
+	t_node *lst;
 	int size_a;
-	int size_b;
+	// int size_b;
 	// elements_count= max_pos;
-
+	max_pos = ft_pos(ft_lstsize(*a));
 	i = 0;
-	j = 1;
-	lst = malloc(sizeof(t_node *));
-	max_pos = ft_pos(ft_lst_max(a));
-	printf("max pos is %d",max_pos);
-	while (max_pos >= j)
+	j = 0;
+	while (max_pos > j)
 	{
 		i = -1;
-		*lst = *b;
 		size_a = ft_lstsize(*a);
 		while(++i < size_a)
 		{
-			if(((*a)->index & j) == 0)
+			lst = *a;
+			if (((lst->index >> j) & 1) == 0)
 				pb(a, b);
 			else
 				ra(a);
-			
 		}
 		j++;
-		i = -1;
-		size_b = ft_lstsize(*b);
-		while (++i< size_b)
-		{
-			if(((*b)->index & j) == 1)
-				pa(a, b);
-			else
-				rb(a);
-		}
+		while (ft_lstsize(*b))
+			pa(a, b);
 	}
 }
