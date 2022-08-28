@@ -21,7 +21,7 @@
       "stopAtEntry": true,
       "externalConsole": false,
       "cwd": "/Users/yassine/Desktop/42_project/push_swap",
-      "program": "/Users/yassine/Desktop/42_project/push_swap/a.out",
+      "program": "/Users/yassine/Desktop/42_project/push_swap/build/Debug/outDebug",
       "MIMode": "lldb",
       "miDebuggerPath": "gcc"
     }

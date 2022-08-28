@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 01:52:40 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/25 13:14:04 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/28 01:58:03 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ int	ft_index_sort(t_node **a)
 
 void	ft_sort_three(t_node **a)
 {
+	if (ft_lst_sorted(a) == 1)
+		return ;
 	if ((*a)->data < (*a)->link->data && (*a)->link->data > (*a)->link->link->data && (*a)->data > (*a)->link->link->data)
 		rra(a);
 	else if ((*a)->data > (*a)->link->data && (*a)->link->data < (*a)->link->link->data && (*a)->data > (*a)->link->link->data)
@@ -72,9 +74,6 @@ void	ft_sort_three(t_node **a)
 }
 void ft_sort_four(t_node **a, t_node **b)
 {	
-	int i;
-	i = ft_index_sort(a);
-	printf("sort index in 4 is %d",i);
 	if(ft_index_sort(a) == 0)
 	{
 		pb(a, b);
