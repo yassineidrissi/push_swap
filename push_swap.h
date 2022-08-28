@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 21:28:35 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/25 13:05:44 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/28 14:09:55 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <limits.h>
+# include <stdarg.h>
 # include <ctype.h>
 # include "libft/libft.h"
 
@@ -78,6 +79,9 @@ void	ft_sort_radix(t_node **a, t_node **b);
 void	ft_init_index(t_node **a);
 void	ft_sort_index(t_node ** a);
 int		ft_index_sort(t_node ** a);
+
+//**************ft_printf****************//
+int		ft_printf(const char *format, ...);
 
 
 //*************valid arg*******************//

@@ -1,12 +1,14 @@
 {
   "version": "0.2.0",
   "configurations": [
+
+
     {
       "name": "(lldb) Launch",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/a.out",
-      "args": [],
+      "program": "${workspaceFolder}/push_swap",
+      "args": ["1", "2", "3", "4"],
       "stopAtEntry": false,
       "cwd": "${fileDirname}",
       "environment": [],
@@ -18,10 +20,10 @@
       "type": "cppdbg",
       "request": "launch",
       "args": [],
-      "stopAtEntry": true,
+      "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/Users/yassine/Desktop/42_project/push_swap",
-      "program": "/Users/yassine/Desktop/42_project/push_swap/build/Debug/outDebug",
+      "cwd":"${fileDirname}", 
+      "program": "/Users/yassine/Desktop/42_project/push_swap/push_swap",
       "MIMode": "lldb",
       "miDebuggerPath": "gcc"
     }

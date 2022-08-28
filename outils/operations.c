@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 19:19:41 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/24 23:32:07 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/28 14:35:58 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,20 +25,20 @@ static void swap(struct node **a)
 void sa(struct node **a)
 {
 	swap(a);
-	printf("sa\n");
+	ft_printf("sa\n");
 }
 
 void sb(struct node **b)
 {
 	swap(b);
-	printf("sb\n");
+	ft_printf("sb\n");
 }
 
 void ss(struct node **a, struct node **b)
 {
 	swap(a);
 	swap(b);
-	printf("ss\n");
+	ft_printf("ss\n");
 }
 
 // void ft_printflst(t_node **a)
@@ -68,13 +68,13 @@ static void ft_pushlst(t_node **a, t_node **b)
 void pa(struct node **a, struct node **b)
 {
 	ft_pushlst(a, b);
-	printf("pa\n");
+	ft_printf("pa\n");
 }
 
 void pb(struct node **a, struct node **b)
 {
 	ft_pushlst(b, a);
-	printf("pb\n");
+	ft_printf("pb\n");
 }
 
 // void pa(struct node **a, struct node **b)
@@ -116,20 +116,20 @@ static void ft_lstrangeup(t_node **a)
 void ra(t_node **a)
 {
 	ft_lstrangeup(a);
-	printf("ra\n");
+	ft_printf("ra\n");
 }
 
 void rb(t_node **b)
 {
 	ft_lstrangeup(b);
-	printf("rb\n");
+	ft_printf("rb\n");
 }
 
 void rr(t_node **a, t_node **b)
 {
 	ft_lstrangeup(a);
 	ft_lstrangeup(b);
-	printf("rr\n");
+	ft_printf("rr\n");
 }
 
 //******other methode for ra and rb*****************************//
@@ -187,20 +187,20 @@ static void ft_lstrangedown(t_node **a)
 void rra(t_node **a)
 {
 	ft_lstrangedown(a);
-	printf("rra\n");
+	ft_printf("rra\n");
 }
 
 void rrb(t_node	**b)
 {
 	ft_lstrangedown(b);
-	printf("rrb\n");
+	ft_printf("rrb\n");
 }
 
 void rrr(t_node **a, t_node **b)
 {
 	ft_lstrangedown(a);
 	ft_lstrangedown(b);
-	printf("rrr\n");
+	ft_printf("rrr\n");
 }
 
 // void rrb(t_list **b)
