@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 01:52:40 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/28 01:58:03 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/29 19:55:28 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_index_sort(t_node **a)
 	{
 		if ((*tmp)->data == min)
 		{
-			printf("index is %d\n", i);
+			// printf("index is %d\n", i);
 			return (i);
 		}
 		*tmp = (*tmp)->link;
@@ -130,6 +130,7 @@ void ft_sort_five(t_node **a, t_node **b)
 	else if(ft_index_sort(a) == 3)
 	{
 		rra(a);
+		rra(a);
 		pb(a, b);
 		ft_sort_four(a, b);
 		pa(a, b);
@@ -152,6 +153,8 @@ void ft_sort_man(t_node **a, t_node **b)
 		ft_sort_three(a);
 	else if(ft_lstsize(*a) == 4)
 		ft_sort_four(a, b);
-	else
+	else if(ft_lstsize(*a) == 5)
 		ft_sort_five(a, b);
+	else
+		exit(1);
 }

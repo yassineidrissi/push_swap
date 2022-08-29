@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 23:02:58 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/29 19:23:25 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/29 19:44:52 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void exit_error(int i)
 {
-	printf("error %d\n", i);
+	printf("Error\n");
 	exit(i);
 }
 
@@ -39,7 +39,7 @@ static int ft_duplicate(char **str, char *s)
 	int i;
 	int j;
 	
-	i = -1;
+	i = 0;
 	j = 0;
 	while(str[++i])
 		if(ft_atoi(str[i]) == ft_atoi(s))

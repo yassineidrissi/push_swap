@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 18:40:13 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/29 19:24:01 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/29 19:58:47 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ static void ft_sort_lst(t_node **a, t_node **b)
     else
     {
         ft_init_index(a);
-        ft_printf("ft_int_is_working %d\n",(*a)->index);
+        // ft_printf("ft_int_is_working %d\n",(*a)->index);
         ft_sort_index(a);
-		ft_printf("ft_sort is working %d\n",(*a)->index);
+		// ft_printf("ft_sort is working %d\n",(*a)->index);
         ft_sort_radix(a, b);     
     }
 }
@@ -49,15 +49,15 @@ int main(int ac, char ** av)
     ft_arg_is_valid(ac, av);
     stack_a = (t_node **)malloc(sizeof(t_node*));
     stack_b = (t_node **)malloc(sizeof(t_node*));
-    ft_printf("your corent stack is: \n");
-    ft_printflst(stack_a);
+    // ft_printf("your corent stack is: \n");
+    // ft_printflst(stack_a);
     *stack_a = NULL;
     *stack_b = NULL;
     ft_add_stacknode(stack_a, ac, av);
     //! we will see what to do in free for case of list is sorted
     if(ft_lst_sorted(stack_a) == 1)
     {
-        ft_printf("list is sorted\n");
+        // ft_printf("list is sorted\n");
         // ft_free_lst((void *)stack_a);
         // ft_free_lst((void *)stack_b);
         return 0;
