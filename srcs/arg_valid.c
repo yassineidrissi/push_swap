@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 23:02:58 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/21 03:58:05 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/29 19:23:25 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,13 @@ static int ft_duplicate(char **str, char *s)
 	int j;
 	
 	i = -1;
-	j = -1;
+	j = 0;
 	while(str[++i])
 		if(ft_atoi(str[i]) == ft_atoi(s))
 			j++;
-	if (j)
-		return (1);
-	return 0;
+	if (j == 1)
+		return 0;
+	return 1;
 }
 
 void ft_arg_is_valid(int ac, char **av)

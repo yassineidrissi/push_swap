@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 18:40:13 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/28 14:15:22 by yaidriss         ###   ########.fr       */
+/*   Updated: 2022/08/29 19:24:01 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int main(int ac, char ** av)
         return 0;
     }
     ft_sort_lst(stack_a, stack_b);
-    ft_printf("your list now is\n");
-    ft_printflst(stack_a);
+    // ft_printf("your list now is\n");
+    // ft_printflst(stack_a);
 }
 
