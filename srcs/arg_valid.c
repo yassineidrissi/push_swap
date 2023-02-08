@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   arg_valid.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
+/*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 23:02:58 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/29 19:44:52 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/06 21:48:43 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void exit_error(int i)
 {
-	printf("Error\n");
+	printf("Error %d\n", i);
 	exit(i);
 }
 
@@ -39,36 +39,41 @@ static int ft_duplicate(char **str, char *s)
 	int i;
 	int j;
 	
-	i = 0;
+	i = -1;
 	j = 0;
 	while(str[++i])
 		if(ft_atoi(str[i]) == ft_atoi(s))
 			j++;
+	// ft_printf("the number of duplicates is %d and the value is %s\n", j, s);
 	if (j == 1)
-		return 0;
-	return 1;
+		return 1;
+	return 0;
 }
 
-void ft_arg_is_valid(int ac, char **av)
+char **ft_arg_is_valid(int ac, char **av)
 {
 	int i;
-	// long temp;
 	char **str;
-
-	i = 0;
-	if (ac == 2)
-		str = ft_split(av[1],' ');
-	else
+	char *line;
+	
+	(void) ac;
+	i = 1;
+	while(av[i])
 	{
-		i = 1;
-		str = av;
+		line = ft_strjoin(line, av[i++]);
+		ft_printf("line is %s\n", line);
+		line = ft_strjoin(line, " ");
 	}
+	str = ft_split(line,' ');
+	i = 1;
 	while(str[i])
 	{
+	ft_printf("the str is : %s\n", str[i]);
 		if(!ft_isalnumstr(str[i]))
 			exit_error(2);
-		if (ft_duplicate(str,str[i]))
-			exit_error(3);
+		if (ft_duplicate(str,str[i]) != 1)
+			exit_error(i);
 		i++;
 	}
+	return str;
 }

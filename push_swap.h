@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
+/*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 21:28:35 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/28 14:09:55 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/06 22:25:00 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void 	rrr(t_node **a, t_node **b);
 
 //************** outils *******************//
 
-void	ft_add_stacknode(t_node **stack_a, int ac, char **av);
+void	ft_add_stacknode(t_node **stack_a, char **tmp);
 void	ft_free_lst(void **lst);
 int		ft_lst_sorted(t_node **a);
 int 	ft_lst_lenght(t_node **a);
@@ -86,6 +86,6 @@ int		ft_printf(const char *format, ...);
 
 //*************valid arg*******************//
 
-void	ft_arg_is_valid(int ac, char  **av);
+char**	ft_arg_is_valid(int ac, char  **av);
 
 #endif

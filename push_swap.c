@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
+/*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 18:40:13 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/29 19:58:47 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/06 21:59:29 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void  ft_printflst(t_node **a)
+void	ft_printflst(t_node **a)
 {
-    t_node **lst;
+		t_node **lst;
     lst = malloc(sizeof(t_node **));
     *lst = *a;
     while (*lst)
@@ -43,18 +43,21 @@ int main(int ac, char ** av)
 {
     t_node **stack_a;
     t_node **stack_b;
+		char **tmp;
 
     if(ac < 2)
         return 1;
-    ft_arg_is_valid(ac, av);
+    tmp = ft_arg_is_valid(ac, av);
+    ft_printf("your corent stack is: \n");
     stack_a = (t_node **)malloc(sizeof(t_node*));
     stack_b = (t_node **)malloc(sizeof(t_node*));
-    // ft_printf("your corent stack is: \n");
     // ft_printflst(stack_a);
     *stack_a = NULL;
     *stack_b = NULL;
-    ft_add_stacknode(stack_a, ac, av);
+    ft_add_stacknode(stack_a, tmp);
     //! we will see what to do in free for case of list is sorted
+		ft_printf("the list now is\n");
+		ft_printflst(stack_a);
     if(ft_lst_sorted(stack_a) == 1)
     {
         // ft_printf("list is sorted\n");
@@ -63,7 +66,7 @@ int main(int ac, char ** av)
         return 0;
     }
     ft_sort_lst(stack_a, stack_b);
-    // ft_printf("your list now is\n");
-    // ft_printflst(stack_a);
+    ft_printf("your list now is\n");
+    ft_printflst(stack_a);
 }
 

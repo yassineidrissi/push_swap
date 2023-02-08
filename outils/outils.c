@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   outils.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
+/*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:37:03 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/25 13:49:46 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/06 22:24:34 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,16 +48,11 @@ void	ft_free_lst(void **lst)
 	free(lst);
 }
 
-void	ft_add_stacknode(struct node **stack_a, int ac, char **av)
+void	ft_add_stacknode(struct node **stack_a, char **tmp)
 {
-	char	**tmp;
 	int		i;
 
 	i = 0;
-	if (ac == 2)
-		tmp = ft_split(av[1], ' ');
-	else
-		tmp = av + 1;
 	while (tmp[i])
 		ft_lstadd_back(stack_a, ft_lstnew(ft_atoi(tmp[i++])));
 	// if (ac == 2)

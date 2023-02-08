@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+         #
+#    By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/12 22:48:21 by yaidriss          #+#    #+#              #
-#    Updated: 2022/08/28 14:10:37 by yaidriss         ###   ########.fr        #
+#    Updated: 2023/02/05 18:59:05 by yaidriss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,17 +31,13 @@ SRCS			= 	push_swap.c \
 					# sort_simple.c utile_sort_simple.c \
 					# radix_sort.c
 					
-SRCS_B			= 	checker.c \
-					utils/arg_valid.c \
-					utils/initStack.c \
-					utils/link_list.c \
-					utils/is_sorted.c \
-					operations/operations_push.c \
-					operations/operations_rev_rotate.c \
-					operations/operations_rotate.c \
-					operations/operations_swap.c \
-					sort_simple.c utile_sort_simple.c \
-					radix_sort.c
+SRCS_B			=   push_swap.c \
+					srcs/arg_valid.c \
+					outils/operations.c\
+					outils/outils.c\
+					outils/sort_lst_radix.c\
+					outils/sort_lst_man.c\
+					outils/ft_printf.c\
 					
 OBJES 		= ${SRCS:.c=.o}
 OBJES_B 	= ${SRCS_B:.c=.o}
@@ -56,7 +52,19 @@ RM 			= rm -rf
 				$(CC) ${CFLAGS} -c $< -o $@
 	
 
-all			:	$(NAME)
+all			:	1337_logo $(NAME)
+
+
+1337_logo : 
+	@echo "\033[92m░░███╗░░██████╗░██████╗░███████╗\033[0m"
+	@echo "\033[92m░████║░░╚════██╗╚════██╗╚════██║\033[0m"
+	@echo "\033[92m██╔██║░░░█████╔╝░█████╔╝░░░░██╔╝\033[0m"
+	@echo "\033[92m╚═╝██║░░░╚═══██╗░╚═══██╗░░░██╔╝░\033[0m"
+	@echo "\033[92m███████╗██████╔╝██████╔╝░░██╔╝░░\033[0m"
+	@echo "\033[92m╚══════╝╚═════╝░╚═════╝░░░╚═╝░░░\033[0m"
+	@echo ""
+	@echo "\033[92m generation of client and server exucted files✅\033[0m"
+
 
 $(NAME)		:	$(LIBFT) $(OBJES) push_swap.h
 				$(CC) $(OBJES) ${LIBFT} -o $(NAME)
@@ -67,7 +75,8 @@ $(NAME_B)	:   $(LIBFT) $(OBJES_B) push_swap.h
 $(LIBFT)	:
 				$(MAKE) -C $(LIBFT_PATH)
 
-bonus		: $(NAME_B)
+bonus		: $(LIBFT) $(OBJES) push_swap.h
+					 $(NAME_B)
 
 clean		:
 				$(MAKE) -C $(LIBFT_PATH) clean
@@ -79,6 +88,6 @@ fclean		:	clean
 				$(RM) $(NAME)
 				$(RM) $(NAME_B)
 
-re			:	clean all
+re			:	fclean all
 
 .PHONY		:	all clean fclean re ${LIBFT}

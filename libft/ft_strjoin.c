@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yidrissi <yassine1337idrissi@gmail.com>    +#+  +:+       +#+        */
+/*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 12:13:46 by yidrissi          #+#    #+#             */
-/*   Updated: 2021/12/01 08:19:48 by yidrissi         ###   ########.fr       */
+/*   Updated: 2023/02/06 21:46:51 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,8 @@ char	*ft_strjoin(char const *s1, char const	*s2)
 	j = 0;
 	se = (char *)s2;
 	f = (char *)s1;
-	if (!s1 || !s2)
-		return (NULL);
 	ptr = (char *)ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
+	printf("im here\n");
 	if (!ptr)
 		return (ptr);
 	while (f && f[i] != '\0')
@@ -35,6 +34,7 @@ char	*ft_strjoin(char const *s1, char const	*s2)
 	while (se && se[j] != '\0')
 		ptr[i++] = se[j++];
 	ptr[i] = '\0';
+	free(f);
 	return (ptr);
 }
 
