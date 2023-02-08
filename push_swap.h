@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 21:28:35 by yaidriss          #+#    #+#             */
-/*   Updated: 2023/02/06 22:25:00 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/08 20:26:41 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ int		ft_printf(const char *format, ...);
 //*************valid arg*******************//
 
 char**	ft_arg_is_valid(int ac, char  **av);
+void	ft_printflst(t_node **a);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 18:40:13 by yaidriss          #+#    #+#             */
-/*   Updated: 2023/02/06 21:59:29 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/08 20:10:52 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ int main(int ac, char ** av)
     ft_sort_lst(stack_a, stack_b);
     ft_printf("your list now is\n");
     ft_printflst(stack_a);
+    ft_printflst(stack_b);
 }
 
