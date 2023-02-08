@@ -31,5 +31,10 @@
   "files.associations": {
     "libft.h": "c",
     "push_swap.h": "c"
-  }
+  },
+	{
+		"[c]": {
+			"editor.defaultFormatter": "keyhr.42-c-format"
+		}
+	}
 }
