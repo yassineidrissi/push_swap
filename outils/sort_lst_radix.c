@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 18:25:30 by yaidriss          #+#    #+#             */
-/*   Updated: 2023/02/08 21:27:49 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/10 20:59:20 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_pos(int n)
 	int	i;
 
 	i = 0;
-	while (n) 
+	while (n)
 	{
 		n >>= 1;
 		i++;
@@ -103,8 +103,8 @@ void	ft_sort_radix(t_node **a, t_node **b)
 	// }
 	// printf("%d\n", ft_max_pos(*b));
 	max_pos = ft_lstsize(*b) - 1;
-	printf("%d\n", max_pos);
-	printf("%d\n",(*b)->index);
+	// printf("%d\n", max_pos);
+	// printf("%d\n",(*b)->index);
 	// ft_printflst(b);
 	// exit(0);
 	// ft_printf("%d\n", max_pos);

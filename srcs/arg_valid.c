@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 23:02:58 by yaidriss          #+#    #+#             */
-/*   Updated: 2023/02/06 21:48:43 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/09 19:14:43 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,14 +61,14 @@ char **ft_arg_is_valid(int ac, char **av)
 	while(av[i])
 	{
 		line = ft_strjoin(line, av[i++]);
-		ft_printf("line is %s\n", line);
+		// ft_printf("line is %s\n", line);
 		line = ft_strjoin(line, " ");
 	}
 	str = ft_split(line,' ');
 	i = 1;
 	while(str[i])
 	{
-	ft_printf("the str is : %s\n", str[i]);
+	// ft_printf("the str is : %s\n", str[i]);
 		if(!ft_isalnumstr(str[i]))
 			exit_error(2);
 		if (ft_duplicate(str,str[i]) != 1)
