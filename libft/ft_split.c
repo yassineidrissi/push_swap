@@ -41,7 +41,7 @@ static char	*ft_add_mot(const char *str, int i, int j)
 
 	mot = 0;
 	len_mot = (j - i + 1) + 1;
-	mot = (char *)malloc (len_mot * sizeof(char));
+	mot = (char *)malloc(len_mot * sizeof(char));
 	if (!mot)
 		return (0);
 	k = 0;
@@ -83,7 +83,7 @@ char	**ft_split(const char *str, char c)
 	int		k;
 
 	ft_init(&i, &j, &k);
-	result = (char **)malloc (ft_size_malloc (str, c) * sizeof(char *));
+	result = (char **)malloc(ft_size_malloc(str, c) * sizeof(char *));
 	if (!result || !str)
 		return (0);
 	while (str && str[i] != '\0')

@@ -24,7 +24,7 @@ static int	ft_nbrlen(int nbr)
 	{
 		mod = -nbr / 10;
 		len++;
-	}	
+	}
 	while (mod > 0)
 	{
 		len++;

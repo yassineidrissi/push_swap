@@ -21,7 +21,9 @@ int	ft_tolower(int c)
 /*
 int	main(int argc, char **argv)
 {
-	int i = 0;
+	int	i;
+
+	i = 0;
 	while (argv[1][i])
 	{
 		printf("%c", ft_tolower(argv[1][i]));

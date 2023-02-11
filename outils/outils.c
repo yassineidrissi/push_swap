@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:37:03 by yaidriss          #+#    #+#             */
-/*   Updated: 2023/02/06 22:24:34 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/11 21:38:35 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,19 +50,16 @@ void	ft_free_lst(void **lst)
 
 void	ft_add_stacknode(struct node **stack_a, char **tmp)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (tmp[i])
 		ft_lstadd_back(stack_a, ft_lstnew(ft_atoi(tmp[i++])));
-	// if (ac == 2)
-		// ft_free_lst((void *)tmp);
-	//ft_index_sort(stack_a);
 }
 
 int	ft_lst_sorted(t_node **a)
 {
-	t_node **tmp;
+	t_node	**tmp;
 
 	tmp = (t_node **)malloc(sizeof(struct node *));
 	*tmp = *a;
@@ -70,12 +67,10 @@ int	ft_lst_sorted(t_node **a)
 	{
 		if ((*tmp)->data > (*tmp)->link->data)
 		{
-			// free(*tmp);
 			return (0);
 		}
 		tmp = &(*tmp)->link;
 	}
-	// free(tmp);
 	return (1);
 }
 
@@ -89,16 +84,16 @@ int	ft_lst_lenght(t_node **a)
 		i++;
 		(*a) = (*a)->link;
 	}
-	// printf("the length of the lst is %d\n", i);
 	return (i);
 }
 
-void ft_init_index(t_node **a)
+void	ft_init_index(t_node **a)
 {
-	t_node **tmp;
+	t_node	**tmp;
+
 	tmp = malloc(sizeof(t_node *));
 	*tmp = *a;
-	while(*tmp)
+	while (*tmp)
 	{
 		(*tmp)->index = -1;
 		(*tmp) = (*tmp)->link;
@@ -106,15 +101,15 @@ void ft_init_index(t_node **a)
 	free(tmp);
 }
 
-int ft_min_index(t_node **a)
+int	ft_min_index(t_node **a)
 {
-	t_node **tmp;
-	int min;
+	t_node	**tmp;
+	int		min;
 
 	min = MAXINT;
 	tmp = malloc(sizeof(t_node *));
 	*tmp = *a;
-	while(*tmp)
+	while (*tmp)
 	{
 		if ((*tmp)->index == -1 && min > (*tmp)->data)
 			min = (*tmp)->data;
@@ -124,7 +119,7 @@ int ft_min_index(t_node **a)
 	return (min);
 }
 
-void ft_sort_index(t_node **a)
+void	ft_sort_index(t_node **a)
 {
 	int min;
 	int i;
@@ -134,17 +129,14 @@ void ft_sort_index(t_node **a)
 	tmp = malloc(sizeof(t_node *));
 	i = 0;
 	j = 0;
-	while(j++ < ft_lstsize(*a))
+	while (j++ < ft_lstsize(*a))
 	{
 		*tmp = *a;
 		while (*tmp)
 		{
 			min = ft_min_index(a);
 			if ((*tmp)->data == min)
-			{
 				(*tmp)->index = i++;
-				// printf("the index %d , and min is %d\n",(*tmp)->index , min);
-			}
 			(*tmp) = (*tmp)->link;
 		}
 	}

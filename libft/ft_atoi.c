@@ -14,8 +14,8 @@
 
 static int	ft_isspace(char c)
 {
-	if (c == '\f' || c == '\n' || c == '\r' || c == '\t'
-		|| c == '\v' || c == ' ')
+	if (c == '\f' || c == '\n' || c == '\r' || c == '\t' || c == '\v'
+		|| c == ' ')
 		return (1);
 	else
 		return (0);
@@ -30,9 +30,9 @@ static void	ft_init(int *i, long long int *s, unsigned long long int *n)
 
 int	ft_atoi(const char *str)
 {
-	int							i;
-	long long int				s;
-	unsigned long long int		n;
+	int						i;
+	long long int			s;
+	unsigned long long int	n;
 
 	ft_init(&i, &s, &n);
 	while (ft_isspace(str[i]))

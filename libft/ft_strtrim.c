@@ -14,7 +14,7 @@
 
 int	ft_checkisthere(char *str, char c)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -28,7 +28,7 @@ int	ft_checkisthere(char *str, char c)
 
 int	ft_isstar(char *str, char *s)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -42,7 +42,7 @@ int	ft_isstar(char *str, char *s)
 
 int	ft_isend(char *str, char *s)
 {
-	int		len;
+	int	len;
 
 	len = ft_strlen(str);
 	while (len > 0)
@@ -54,10 +54,10 @@ int	ft_isend(char *str, char *s)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const	*set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		start;
-	int		end;
+	int	start;
+	int	end;
 
 	if (!s1 || !set)
 		return (NULL);

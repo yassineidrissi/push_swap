@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <string.h>
 
-void	ft_bzero(void	*s,	size_t	n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned int	i;
 	unsigned char	*temp;

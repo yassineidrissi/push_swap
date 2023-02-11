@@ -5,13 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02 / 08 21:50:06 by yaidriss          #+#    #+#             */
-/*   Updated: 2023/02/08 21:52:22 by yaidriss         ###   ########.fr       */
+/*   Created: 2023/02/11 21:33:12 by yaidriss          #+#    #+#             */
+/*   Updated: 2023/02/11 21:33:16 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP
-# define PUSH_SWAP
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 # include "libft/libft.h"
 # include <ctype.h>

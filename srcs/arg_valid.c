@@ -6,74 +6,71 @@
 /*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 23:02:58 by yaidriss          #+#    #+#             */
-/*   Updated: 2023/02/09 19:14:43 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/11 21:35:06 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void exit_error(int i)
+void	exit_error(int i)
 {
 	printf("Error %d\n", i);
 	exit(i);
 }
 
-static int ft_isalnumstr(char *str)
+static int	ft_isalnumstr(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (str[0] == '-' || str[0] == '+')
 		i++;
-	while(str[i])
+	while (str[i])
 	{
-		if(!ft_isdigit(str[i]))
-			return 0;
+		if (!ft_isdigit(str[i]))
+			return (0);
 		i++;
 	}
-	return 1;
+	return (1);
 }
 
-static int ft_duplicate(char **str, char *s)
+static int	ft_duplicate(char **str, char *s)
 {
-	int i;
-	int j;
-	
+	int	i;
+	int	j;
+
 	i = -1;
 	j = 0;
-	while(str[++i])
-		if(ft_atoi(str[i]) == ft_atoi(s))
+	while (str[++i])
+		if (ft_atoi(str[i]) == ft_atoi(s))
 			j++;
-	// ft_printf("the number of duplicates is %d and the value is %s\n", j, s);
 	if (j == 1)
-		return 1;
-	return 0;
+		return (1);
+	return (0);
 }
 
-char **ft_arg_is_valid(int ac, char **av)
+char	**ft_arg_is_valid(int ac, char **av)
 {
-	int i;
-	char **str;
-	char *line;
-	
-	(void) ac;
+	int		i;
+	char	**str;
+	char	*line;
+
+	(void)ac;
 	i = 1;
-	while(av[i])
+	while (av[i])
 	{
 		line = ft_strjoin(line, av[i++]);
-		// ft_printf("line is %s\n", line);
 		line = ft_strjoin(line, " ");
 	}
-	str = ft_split(line,' ');
+	str = ft_split(line, ' ');
 	i = 1;
-	while(str[i])
+	while (str[i])
 	{
-	// ft_printf("the str is : %s\n", str[i]);
-		if(!ft_isalnumstr(str[i]))
+		if (!ft_isalnumstr(str[i]))
 			exit_error(2);
-		if (ft_duplicate(str,str[i]) != 1)
+		if (ft_duplicate(str, str[i]) != 1)
 			exit_error(i);
 		i++;
 	}
-	return str;
+	return (str);
 }

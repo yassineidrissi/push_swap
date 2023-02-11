@@ -66,8 +66,9 @@
 //     adm.nxt->nxt->num = 2;
 //     adm.nxt->nxt->prv = &(adm.nxt->num);
 //     printf("\nthe value now is %d",adm.nxt->nxt->num);
-// } 
-//!*******************************test sa and sb********************************!/ // int main()
+// }
+//!*******************************test sa and sb********************************!/
+	// int main()
 // int main()
 // {
 //     // p// struct yas
@@ -101,7 +102,8 @@
 //     printf("yas\n");
 //     // ft_printflst(&yas);
 // }
-//!*******************************test pa and pb********************************!/ // int main()
+//!*******************************test pa and pb********************************!/
+	// int main()
 // int main()
 // {
 //     // p// struct yas
@@ -139,42 +141,42 @@
 
 //!*******************************test ra and rb********************************!/
 
-int main()
+int	main(void)
 {
-    // p// struct yas
-    struct node *yas;
-    struct node *ya;
-    yas = malloc(sizeof(struct node));
-    ya = malloc(sizeof(struct node));
-    yas->link = malloc(sizeof(struct node));
-    ya->link = malloc(sizeof(struct node));
-    yas->link->link = malloc(sizeof(struct node));
-    ya->link->link = malloc(sizeof(struct node));
-    yas->data = 1;
-	yas->link->data = 2;
-    yas->link->link->data = 3;
-    yas->link->link->link = NULL;
-    ya->data = 4;
-	ya->link->data = 5;
-    ya->link->link->data = 6;
-    ya->link->link->link = NULL;
+	struct node	*yas;
+	struct node	*ya;
 
-    // ft_printflst(&ya);
-    printf("the 1 value of ya is %d\n",ya->data);
-    // ft_printflst(&yas);
-    printf("the 2 value of ya is %d\n",ya->link->data);
-    printf("the 3 value of ya is %d\n",ya->link->link->data);
-    rra(&ya);
-    ft_printflst(&ya);
-    // ft_printflst(&ya);
-    printf("yas\n");
-    printf("the 1 value of yas is %d\n",yas->data);
-    // ft_printflst(&yas);
-    printf("the 2 value of yas is %d\n",yas->link->data);
-    printf("the 3 value of yas is %d\n",yas->link->link->data);
-    rra(&yas);
-    ft_printflst(&yas);
-    // ft_printflst(&yas);
+	// p// struct yas
+	yas = malloc(sizeof(struct node));
+	ya = malloc(sizeof(struct node));
+	yas->link = malloc(sizeof(struct node));
+	ya->link = malloc(sizeof(struct node));
+	yas->link->link = malloc(sizeof(struct node));
+	ya->link->link = malloc(sizeof(struct node));
+	yas->data = 1;
+	yas->link->data = 2;
+	yas->link->link->data = 3;
+	yas->link->link->link = NULL;
+	ya->data = 4;
+	ya->link->data = 5;
+	ya->link->link->data = 6;
+	ya->link->link->link = NULL;
+	// ft_printflst(&ya);
+	printf("the 1 value of ya is %d\n", ya->data);
+	// ft_printflst(&yas);
+	printf("the 2 value of ya is %d\n", ya->link->data);
+	printf("the 3 value of ya is %d\n", ya->link->link->data);
+	rra(&ya);
+	ft_printflst(&ya);
+	// ft_printflst(&ya);
+	printf("yas\n");
+	printf("the 1 value of yas is %d\n", yas->data);
+	// ft_printflst(&yas);
+	printf("the 2 value of yas is %d\n", yas->link->data);
+	printf("the 3 value of yas is %d\n", yas->link->link->data);
+	rra(&yas);
+	ft_printflst(&yas);
+	// ft_printflst(&yas);
 }
 
 //!*******************************test rra and rrb********************************!/
@@ -221,4 +223,3 @@ int main()
 //     printf("the 3 value of yas is %d\n",yas->link->link->data);
 //     // ft_printflst(&yas);
 // }
-

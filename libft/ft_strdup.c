@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <string.h>
 
-char	*ft_strdup(const char	*s1)
+char	*ft_strdup(const char *s1)
 {
 	char	*s;
 	char	*ptr;
