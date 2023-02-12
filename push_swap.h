@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 21:33:12 by yaidriss          #+#    #+#             */
-/*   Updated: 2023/02/11 21:33:16 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/13 00:50:51 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int					ft_lst_lenght(t_node **a);
 
 //************** sort *******************//
 void				ft_sort_man(t_node **a, t_node **b);
-void				ft_sort_radix(t_node **a, t_node **b);
+void				ft_sort_radix(t_node **a, t_node **b, int size);
 void				ft_init_index(t_node **a);
 void				ft_sort_index(t_node **a);
 int					ft_index_sort(t_node **a);
