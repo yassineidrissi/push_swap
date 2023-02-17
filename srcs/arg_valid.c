@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 23:02:58 by yaidriss          #+#    #+#             */
-/*   Updated: 2023/02/11 21:35:06 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/16 21:18:09 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ char	**ft_arg_is_valid(int ac, char **av)
 		line = ft_strjoin(line, " ");
 	}
 	str = ft_split(line, ' ');
+	free(line);
 	i = 1;
 	while (str[i])
 	{

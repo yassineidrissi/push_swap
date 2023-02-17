@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_lst_man.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaidriss <yaidriss@student1337.com>        +#+  +:+       +#+        */
+/*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 01:52:40 by yaidriss          #+#    #+#             */
-/*   Updated: 2022/08/29 19:55:28 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/18 00:18:39 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,12 @@ int	ft_index_sort(t_node **a)
 			min = (*tmp)->link->data;
 		*tmp = (*tmp)->link;
 	}
-	// printf("min is %d\n", min);
 	i = 0;
 	*tmp = *a;
 	while (*tmp)
 	{
 		if ((*tmp)->data == min)
-		{
-			// printf("index is %d\n", i);
 			return (i);
-		}
 		*tmp = (*tmp)->link;
 		i++;
 	}
@@ -53,26 +49,25 @@ int	ft_index_sort(t_node **a)
 
 void	ft_sort_three(t_node **a)
 {
+	int	n;
+	int	b;
+	int	c;
+
+	c = (*a)->link->link->data;
+	b = (*a)->link->data;
+	n = (*a)->data;
 	if (ft_lst_sorted(a) == 1)
 		return ;
-	if ((*a)->data < (*a)->link->data
-		&& (*a)->link->data > (*a)->link->link->data
-		&& (*a)->data > (*a)->link->link->data)
+	if (n < b && b > c && n > c)
 		rra(a);
-	else if ((*a)->data > (*a)->link->data
-			&& (*a)->link->data < (*a)->link->link->data
-			&& (*a)->data > (*a)->link->link->data)
+	else if (n > b && b < c && n > c)
 		ra(a);
-	else if ((*a)->data < (*a)->link->data
-			&& (*a)->link->data > (*a)->link->link->data
-			&& (*a)->data < (*a)->link->link->data)
+	else if (n < b && b > c && n < c)
 	{
 		rra(a);
 		sa(a);
 	}
-	else if ((*a)->data > (*a)->link->data
-			&& (*a)->link->data < (*a)->link->link->data
-			&& (*a)->data < (*a)->link->link->data)
+	else if (n > b && b < c && n < c)
 		sa(a);
 	else
 	{
@@ -80,6 +75,15 @@ void	ft_sort_three(t_node **a)
 		rra(a);
 	}
 }
+
+void	ft_sort_four_slave(t_node **a, t_node **b)
+{
+	rra(a);
+	pb(a, b);
+	ft_sort_three(a);
+	pa(a, b);
+}
+
 void	ft_sort_four(t_node **a, t_node **b)
 {
 	if (ft_index_sort(a) == 0)
@@ -104,64 +108,5 @@ void	ft_sort_four(t_node **a, t_node **b)
 		pa(a, b);
 	}
 	else
-	{
-		rra(a);
-		pb(a, b);
-		ft_sort_three(a);
-		pa(a, b);
-	}
-}
-
-void	ft_sort_five(t_node **a, t_node **b)
-{
-	if (ft_index_sort(a) == 0)
-	{
-		pb(a, b);
-		ft_sort_four(a, b);
-		pa(a, b);
-	}
-	else if (ft_index_sort(a) == 1)
-	{
-		sa(a);
-		pb(a, b);
-		ft_sort_four(a, b);
-		pa(a, b);
-	}
-	else if (ft_index_sort(a) == 2)
-	{
-		ra(a);
-		ra(a);
-		pb(a, b);
-		ft_sort_four(a, b);
-		pa(a, b);
-	}
-	else if (ft_index_sort(a) == 3)
-	{
-		rra(a);
-		rra(a);
-		pb(a, b);
-		ft_sort_four(a, b);
-		pa(a, b);
-	}
-	else
-	{
-		rra(a);
-		pb(a, b);
-		ft_sort_four(a, b);
-		pa(a, b);
-	}
-}
-
-void	ft_sort_man(t_node **a, t_node **b)
-{
-	if (ft_lstsize(*a) == 2)
-		sa(a);
-	else if (ft_lstsize(*a) == 3)
-		ft_sort_three(a);
-	else if (ft_lstsize(*a) == 4)
-		ft_sort_four(a, b);
-	else if (ft_lstsize(*a) == 5)
-		ft_sort_five(a, b);
-	else
-		exit(1);
+		ft_sort_four_slave(a, b);
 }

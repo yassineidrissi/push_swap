@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 21:33:12 by yaidriss          #+#    #+#             */
-/*   Updated: 2023/02/13 00:50:51 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/18 00:39:17 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,11 @@ int					ft_printf(const char *format, ...);
 
 char				**ft_arg_is_valid(int ac, char **av);
 void				ft_printflst(t_node **a);
+
+//*************sort fonctions******************//
+	void			ft_sort_four(t_node **a, t_node **b);
+	void			ft_sort_three(t_node **a);
+
+
 
 #endif

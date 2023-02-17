@@ -6,7 +6,7 @@
 #    By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/12 22:48:21 by yaidriss          #+#    #+#              #
-#    Updated: 2023/02/05 18:59:05 by yaidriss         ###   ########.fr        #
+#    Updated: 2023/02/18 00:34:30 by yaidriss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,13 @@ LIBFT			=	$(LIBFT_PATH)/libft.a
 SRCS			= 	push_swap.c \
 					srcs/arg_valid.c \
 					outils/operations.c\
+					outils/operations2.c\
+					outils/operations3.c\
+					outils/operations4.c\
 					outils/outils.c\
+					outils/outils2.c\
 					outils/sort_lst_radix.c\
+					outils/sort_lst_man2.c\
 					outils/sort_lst_man.c\
 					outils/ft_printf.c\
 					# utils/arg_valid.c \
@@ -31,21 +36,21 @@ SRCS			= 	push_swap.c \
 					# sort_simple.c utile_sort_simple.c \
 					# radix_sort.c
 					
-SRCS_B			=   push_swap.c \
-					srcs/arg_valid.c \
-					outils/operations.c\
-					outils/outils.c\
-					outils/sort_lst_radix.c\
-					outils/sort_lst_man.c\
-					outils/ft_printf.c\
+# SRCS_B			=   push_swap.c \
+# 					srcs/arg_valid.c \
+# 					outils/operations.c\
+# 					outils/outils.c\
+# 					outils/sort_lst_radix.c\
+# 					outils/sort_lst_man.c\
+# 					outils/ft_printf.c\
 					
 OBJES 		= ${SRCS:.c=.o}
-OBJES_B 	= ${SRCS_B:.c=.o}
+# OBJES_B 	= ${SRCS_B:.c=.o}
 
 NAME 		= push_swap
-NAME_B		= checker
+# NAME_B		= checker
 CC 			= cc
-CFLAGS 		= -Wall -Wextra -Werror
+CFLAGS 		=  -Wall -Wextra -Werror
 RM 			= rm -rf
 
 %.o			:	%.c
@@ -75,8 +80,8 @@ $(NAME_B)	:   $(LIBFT) $(OBJES_B) push_swap.h
 $(LIBFT)	:
 				$(MAKE) -C $(LIBFT_PATH)
 
-bonus		: $(LIBFT) $(OBJES) push_swap.h
-					 $(NAME_B)
+# bonus		: $(LIBFT) $(OBJES) push_swap.h
+# 					 $(NAME_B)
 
 clean		:
 				$(MAKE) -C $(LIBFT_PATH) clean

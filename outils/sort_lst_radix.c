@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 18:25:30 by yaidriss          #+#    #+#             */
-/*   Updated: 2023/02/13 00:52:57 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/18 00:43:50 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,14 +59,32 @@ int	ft_max_pos(t_node *s, int max)
 	return (i);
 }
 
-void	ft_sort_radix(t_node **a, t_node **b, int size)
+void	ft_sort_radix_slave(t_node **a, t_node **b)
 {
 	int	max_pos;
+
+	max_pos = ft_lstsize(*b) - 1;
+	while (*b)
+	{
+		if ((*b)->index == max_pos)
+		{
+			pa(a, b);
+			max_pos--;
+		}
+		else if (ft_max_pos(*b, max_pos) < ft_lstsize(*b) / 2)
+		{
+			rb(b);
+		}
+		else
+			rrb(b);
+	}
+}
+
+void	ft_sort_radix(t_node **a, t_node **b, int size)
+{
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
 	if (size < 101)
 		size = 15;
 	else
@@ -87,21 +105,7 @@ void	ft_sort_radix(t_node **a, t_node **b, int size)
 		else
 			ra(a);
 	}
-	max_pos = ft_lstsize(*b) - 1;
-	while (*b)
-	{
-		if ((*b)->index == max_pos)
-		{
-			pa(a, b);
-			max_pos--;
-		}
-		else if (ft_max_pos(*b, max_pos) < ft_lstsize(*b) / 2)
-		{
-			rb(b);
-		}
-		else
-			rrb(b);
-	}
+	ft_sort_radix_slave(a, b);
 }
 	// t_node *lst;
 	// int size_a;
