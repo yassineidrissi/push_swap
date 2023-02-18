@@ -6,7 +6,7 @@
 #    By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/12 22:48:21 by yaidriss          #+#    #+#              #
-#    Updated: 2023/02/18 00:34:30 by yaidriss         ###   ########.fr        #
+#    Updated: 2023/02/18 15:44:04 by yaidriss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,7 @@ CFLAGS 		=  -Wall -Wextra -Werror
 RM 			= rm -rf
 
 %.o			:	%.c
-				$(CC) ${CFLAGS} -c $< -o $@
+				@$(CC) ${CFLAGS} -c $< -o $@
 	
 
 all			:	1337_logo $(NAME)
@@ -72,26 +72,28 @@ all			:	1337_logo $(NAME)
 
 
 $(NAME)		:	$(LIBFT) $(OBJES) push_swap.h
-				$(CC) $(OBJES) ${LIBFT} -o $(NAME)
+				@$(CC) $(OBJES) ${LIBFT} -o $(NAME)
 				
-$(NAME_B)	:   $(LIBFT) $(OBJES_B) push_swap.h
-				$(CC) $(OBJES_B) ${LIBFT} -o $(NAME_B)
+# $(NAME_B)	:   $(LIBFT) $(OBJES_B) push_swap.h
+# 				@$(CC) $(OBJES_B) ${LIBFT} -o $(NAME_B)
 
 $(LIBFT)	:
-				$(MAKE) -C $(LIBFT_PATH)
+				@$(MAKE) -C $(LIBFT_PATH)
 
 # bonus		: $(LIBFT) $(OBJES) push_swap.h
 # 					 $(NAME_B)
 
 clean		:
-				$(MAKE) -C $(LIBFT_PATH) clean
-				$(RM) $(OBJES)
-				$(RM) $(OBJES_B)
+				@$(MAKE) -C $(LIBFT_PATH) clean
+				@$(RM) $(OBJES)
+				@$(RM) $(OBJES_B)
+				@echo "\033[31m Delete exucted files🗑\033[31m"
 
 fclean		:	clean
-				$(MAKE) -C $(LIBFT_PATH) fclean
-				$(RM) $(NAME)
-				$(RM) $(NAME_B)
+				@$(MAKE) -C $(LIBFT_PATH) fclean
+				@$(RM) $(NAME)
+				@$(RM) $(NAME_B)
+				@echo "\033[31m Delete object files🗑\033[31m"
 
 re			:	fclean all
 

@@ -16,20 +16,20 @@ CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
 
 %.o : %.c
-	   ${CC} ${CFLAGS} -c $< -o $@
+	  @${CC} ${CFLAGS} -c $< -o $@
 
 ${NAME} : ${OBG}
-		${AR} $@ ${OBG} 
+		@${AR} $@ ${OBG} 
 all: ${NAME}
 
 bonus: ${OBG_B}
-	${AR} ${NAME} ${OBG_B}
+	@${AR} ${NAME} ${OBG_B}
 
 clean:
-		${RM} ${OBG} ${OBG_B}
+		@${RM} ${OBG} ${OBG_B}
 
 fclean: clean
-		${RM} ${NAME}
+		@${RM} ${NAME}
 
 re:	fclean all
 
