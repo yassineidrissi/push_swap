@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 18:40:13 by yaidriss          #+#    #+#             */
-/*   Updated: 2023/02/18 00:47:11 by yaidriss         ###   ########.fr       */
+/*   Updated: 2023/02/18 13:07:29 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ static void	ft_sort_lst(t_node **a, t_node **b)
 	}
 }
 
-void ft_free_stack(t_node **stack)
+void	ft_free_stack(t_node **stack)
 {
-	t_node *tmp;
+	t_node	*tmp;
 
 	while (*stack)
 	{
@@ -61,9 +61,8 @@ int	main(int ac, char **av)
 	if (ac < 2)
 		return (1);
 	tmp = ft_arg_is_valid(ac, av);
-	exit(0);
-	stack_a = (t_node **)malloc(sizeof(t_node *));
-	stack_b = (t_node **)malloc(sizeof(t_node *));
+	stack_a = malloc(sizeof(t_node *));
+	stack_b = malloc(sizeof(t_node *));
 	*stack_a = NULL;
 	*stack_b = NULL;
 	ft_add_stacknode(stack_a, tmp);
@@ -72,6 +71,4 @@ int	main(int ac, char **av)
 	ft_sort_lst(stack_a, stack_b);
 	ft_free_stack(stack_a);
 	ft_free_stack(stack_b);
-	// ft_free_lst((void**) stack_b);
-	// ft_free_lst((void**) stack_a);
 }
